@@ -1507,7 +1507,7 @@ call this function from other code."
   ;; ensures that this is so.
   (cond ((or truncate-lines
 	     (and truncate-partial-width-windows
-		  (< (window-width window) (screen-width)))
+		  (< (window-width window) (frame-width)))
 	     (> (window-hscroll window) 0))
 	 ;; Lines in this window are being truncated.
 	 (if (and track-eol (eolp))
