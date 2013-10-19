@@ -8,7 +8,7 @@
 
 (setq ispell-local-dictionary-alist
       '(
-	("deutsch"   "" "" "[']" t ("-d" "de_DE") nil utf-8)
+	("deutsch"    "[[:alpha:]]" "[^[:alpha:]]" "[\"]" nil ("-d" "de_DE") nil utf-8)
 	("esperanto" "[[:alpha:]]" "[^[:alpha:]]" "[\"]" nil ("-d" "eo")    nil utf-8)
 	("british"   "" "" "[']" t ("-d" "en_GB") nil utf-8)
 	("american"  "" "" "[']" t ("-d" "en_US") nil utf-8)
