@@ -26,8 +26,11 @@
 (setq TeX-auto-save t)
 (setq TeX-PDF-mode t)
 (setq safe-local-variable-values 
-      (quote ((LaTeX-command . "latex --shell-escape --synctex=1")
-	      (LaTeX-command . "xelatex --shell-escape --synctex=1"))))
+      (quote ((LaTeX-command . "latex --shell-escape")
+	      (LaTeX-command . "xelatex --shell-escape")
+	      (LaTeX-command . "lualatex --shell-escape")
+	      (Latex-using-biber . t)
+	      ))
 
 (setq TeX-view-program-list
       '(("Okular"
