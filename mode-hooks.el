@@ -87,3 +87,8 @@
 		      ;; Set dired-x buffer-local variables here.  For example:
 		      ;; (setq dired-omit-files-p t)
 		      )))
+
+(add-hook 'magit-mode-hook
+	  (lambda()
+	  (setq ediff-diff-program "~/.lisp.gnu/ediff-diff.sh")
+	  ))
