@@ -4,6 +4,8 @@
 
 
 (setq load-path (add-to-list 'load-path "~/.lisp.gnu"))
+(setq load-path (add-to-list 'load-path "~/.emacs.d/site-lisp/magit"))
+(setq load-path (add-to-list 'load-path "~/.emacs.d/site-lisp/dash"))
 
 ;;
 ;; Use mouse-1 instead of mouse-2 for dragging the scrollbar
@@ -13,6 +15,7 @@
 
 
 (require 'scroll-in-place)
+(require 'magit)
 
 (load "mode-hooks")
 (load "abbreviation")
