@@ -26,10 +26,6 @@
 
 (setq use-dialog-box nil)
 
-;; pc-like textmarking
-(load "pc-select")
-;(pc-select-mode)
-
 (server-start)
 
 (custom-set-variables
