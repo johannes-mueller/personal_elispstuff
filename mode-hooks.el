@@ -44,7 +44,7 @@
 (add-hook 'c++-mode-hook
 	  (lambda ()
 	    (load "cc-engine.elc")
-	    (load "my-kde-devel")
+	    ; (load "my-kde-devel")
 					;(load "kde-devel-emacs.elc")
 
 	    (c-set-offset 'innamespace 0)
@@ -53,7 +53,7 @@
 
 (add-hook 'c-mode-hook
 	  (lambda ()
-	    (load "my-kde-devel")
+	    ; (load "my-kde-devel")
 	    )
 )
 
