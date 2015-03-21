@@ -1,0 +1,90 @@
+;; =========================================================================
+;; My own changes... I worked very hard to figure them out and I'm very
+;; proud of them. :-)
+
+
+(setq load-path (add-to-list 'load-path "~/.lisp.gnu"))
+
+;;
+;; Use mouse-1 instead of mouse-2 for dragging the scrollbar
+;;
+(global-set-key [vertical-scroll-bar drag-mouse-1] 'scroll-bar-drag)
+(global-set-key [vertical-scroll-bar down-mouse-1] 'scroll-bar-drag)
+
+
+(require 'scroll-in-place)
+
+(load "mode-hooks")
+;(load "fontfaces")
+;(load "change_accents")
+(load "abbreviation")
+(load "scrolling")       ;; Ermoeglicht scrollen mit dem Mausrad
+; FIXME (load "clean_spaces")    ;; entfernt automatisch Blanks am Ende von Zeilen
+(load "copypaste")
+(load "miscdefuns")
+(load "keys")
+(load "hunspellconf")
+(load "post")
+
+(setq use-dialog-box nil)
+
+;; pc-like textmarking
+(load "pc-select")
+;(pc-select-mode)
+
+(server-start)
+(set-background-color "LightYellow")
+
+(custom-set-variables
+  ;; custom-set-variables was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ '(blink-cursor-mode nil)
+ '(c-hanging-braces-alist (quote ((brace-list-open) (brace-entry-open) (statement-cont) (substatement-open after) (block-close . c-snug-do-while) (extern-lang-open after) (namespace-open after) (module-open after) (composition-open after) (inexpr-class-open after) (inexpr-class-close before))))
+ '(case-fold-search t)
+ '(column-number-mode t)
+ '(cperl-indent-level 8)
+ '(dired-omit-files-p t t)
+ '(global-font-lock-mode t nil (font-lock))
+ '(gnuserv-program (concat exec-directory "/gnuserv"))
+ '(inferior-S+5-program-name "R")
+ '(line-number-mode t)
+ '(load-home-init-file t t)
+ '(mouse-wheel-follow-mouse t)
+ '(mouse-wheel-mode t nil (mwheel))
+ '(paren-mode (quote paren) nil (paren))
+ '(show-paren-mode t nil (paren))
+ '(speedbar-show-unknown-files t)
+ '(speedbar-supported-extension-expressions (quote (".[ch]\\(\\+\\+\\|pp\\|c\\|h\\|xx\\)?" ".tex\\(i\\(nfo\\)?\\)?" ".el" ".emacs" ".l" ".li?sp" ".p" ".java" ".f\\(90\\|77\\|or\\)?" ".ada" ".p[lm]" ".tcl" ".m" ".scm" ".pm" ".py" ".s?html" ".ma?k" "makefile\\(\\.in\\|\\.am\\)?")))
+ '(tool-bar-mode nil nil (tool-bar))
+ '(toolbar-visible-p nil)
+ '(visible-bell t)
+ '(w3m-coding-system (quote utf-8)))
+(custom-set-faces
+  ;; custom-set-faces was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ '(default ((t (:inherit nil :stipple nil :background "#d6d2d0" :foreground "#221f1e" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 98 :width normal :foundry "adobe" :family "Source Code Pro"))))
+ '(cperl-array-face ((((class color) (background light)) (:foreground "magenta4"))))
+ '(cperl-hash-face ((((class color) (background light)) (:foreground "steelblue" :bold t))))
+ '(cperl-nonoverridable-face ((((class color) (background light)) (:foreground "navy"))))
+ '(font-latex-bold-face ((t (:weight bold))))
+ '(font-latex-italic-face ((t (:slant italic))))
+ '(font-latex-string-face ((t (:foreground "green4"))))
+ '(font-lock-comment-face ((((class color) (background light)) (:foreground "rosybrown"))))
+ '(font-lock-doc-string-face ((((class color) (background light)) (:foreground "green4"))))
+ '(font-lock-function-name-face ((((class color) (background light)) (:foreground "blue4" :bold t))))
+ '(font-lock-keyword-face ((((class color) (background light)) (:foreground "red3"))))
+ '(font-lock-preprocessor-face ((((class color) (background light)) (:foreground "steelblue"))))
+ '(font-lock-reference-face ((((class color) (background light)) (:foreground "magenta4"))))
+ '(font-lock-string-face ((((class color) (background light)) (:foreground "green4"))))
+ '(font-lock-type-face ((((class color) (background light)) (:foreground "navy"))))
+ '(font-lock-variable-name-face ((((class color) (background light)) (:foreground "magenta4" :bold t))))
+ '(green ((t (:foreground "green4"))))
+ '(hyper-apropos-documentation ((((class color) (background light)) (:foreground "black"))))
+ '(info-node ((t (:foreground "navy" :bold t))))
+ '(yellow ((t (:foreground "yellow4")))))
+
+(setq minibuffer-max-depth nil)

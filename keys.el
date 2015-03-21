@@ -21,3 +21,6 @@
 ;(define-key global-map '(meta control kp-6) 'bigframe)
 ;(define-key global-map '(meta control kp-left) 'normalframe)
 ;(define-key global-map '(meta control kp-4) 'normalframe)
+
+
+(define-key global-map [(meta g)] 'magit-status)

@@ -26,8 +26,8 @@
 (setq TeX-auto-save t)
 (setq TeX-PDF-mode t)
 (setq safe-local-variable-values 
-      (quote ((LaTeX-command . "latex --shell-escape")
-	      (LaTeX-command . "xelatex --shell-escape"))))
+      (quote ((LaTeX-command . "latex --shell-escape --synctex=1")
+	      (LaTeX-command . "xelatex --shell-escape --synctex=1"))))
 
 (setq TeX-view-program-list
       '(("Okular"
@@ -46,6 +46,24 @@
 )
 
 (define-key global-map [(control c) t] 'tocwindow)
+
+;; Enable synctex correlation
+(setq TeX-source-correlate-method 'synctex)
+;; Enable synctex generation. Even though the command shows
+;; as "latex" pdflatex is actually called
+(custom-set-variables '(LaTeX-command "latex -synctex=1") )
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Use Okular as the pdf viewer. Build okular 
+;; command, so that Okular jumps to the current line 
+;; in the viewer.
+(setq TeX-view-program-selection
+ '((output-pdf "PDF Viewer")))
+(setq TeX-view-program-list
+ '(("PDF Viewer" "okular --unique %o#src:%n%b")))
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 
 ;; (TeX-add-style-hook "mystuff"
 ;;  (function
