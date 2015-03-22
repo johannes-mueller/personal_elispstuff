@@ -30,7 +30,7 @@
 	      (LaTeX-command . "xelatex --shell-escape")
 	      (LaTeX-command . "lualatex --shell-escape")
 	      (Latex-using-biber . t)
-	      ))
+	      )))
 
 (setq TeX-view-program-list
       '(("Okular"
