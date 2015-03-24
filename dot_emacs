@@ -32,12 +32,23 @@
 (server-start)
 
 (custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
+  ;; custom-set-variables was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
  '(blink-cursor-mode nil)
- '(c-hanging-braces-alist (quote ((brace-list-open) (brace-entry-open) (statement-cont) (substatement-open after) (block-close . c-snug-do-while) (extern-lang-open after) (namespace-open after) (module-open after) (composition-open after) (inexpr-class-open after) (inexpr-class-close before))))
+ '(c-hanging-braces-alist 
+   (quote ((brace-list-open) 
+	   (brace-entry-open) 
+	   (statement-cont) 
+	   (substatement-open after) 
+	   (block-close . c-snug-do-while) 
+	   (extern-lang-open after) 
+	   (namespace-open after) 
+	   (module-open after) 
+	   (composition-open after) 
+	   (inexpr-class-open after) 
+	   (inexpr-class-close before))))
  '(case-fold-search t)
  '(column-number-mode t)
  '(cperl-indent-level 8)
@@ -45,13 +56,19 @@
  '(global-font-lock-mode t nil (font-lock))
  '(gnuserv-program (concat exec-directory "/gnuserv"))
  '(inferior-S+5-program-name "R")
+ '(line-number-mode t)
  '(load-home-init-file t t)
  '(mouse-wheel-follow-mouse t)
  '(mouse-wheel-mode t nil (mwheel))
  '(paren-mode (quote paren) nil (paren))
  '(show-paren-mode t nil (paren))
  '(speedbar-show-unknown-files t)
- '(speedbar-supported-extension-expressions (quote (".[ch]\\(\\+\\+\\|pp\\|c\\|h\\|xx\\)?" ".tex\\(i\\(nfo\\)?\\)?" ".el" ".emacs" ".l" ".li?sp" ".p" ".java" ".f\\(90\\|77\\|or\\)?" ".ada" ".p[lm]" ".tcl" ".m" ".scm" ".pm" ".py" ".s?html" ".ma?k" "makefile\\(\\.in\\|\\.am\\)?")))
+ '(speedbar-supported-extension-expressions 
+   (quote 
+    (".[ch]\\(\\+\\+\\|pp\\|c\\|h\\|xx\\)?" ".tex\\(i\\(nfo\\)?\\)?" 
+     ".el" ".emacs" ".l" ".li?sp" ".p" ".java" ".f\\(90\\|77\\|or\\)?" 
+     ".ada" ".p[lm]" ".tcl" ".m" ".scm" ".pm" ".py" ".s?html" ".ma?k" 
+     "makefile\\(\\.in\\|\\.am\\)?")))
  '(tool-bar-mode nil nil (tool-bar))
  '(toolbar-visible-p nil)
  '(visible-bell t)
@@ -59,14 +76,30 @@
 ;;
 ;;
 (custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "LightYellow" :foreground "black" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 112 :width normal :foundry "unknown" :family "Inconsolata"))))
+  ;; custom-set-faces was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ '(default ((t 
+	     (:inherit nil 
+		       :stipple nil 
+		       :background "LightYellow" 
+		       :foreground "black" 
+		       :inverse-video nil 
+		       :box nil 
+		       :strike-through nil 
+		       :overline nil 
+		       :underline nil 
+		       :slant normal 
+		       :weight normal 
+		       :height 98 
+		       :width normal 
+		       :foundry "adobe" :family "Source Code Pro")
+	     )))
  '(cperl-array-face ((((class color) (background light)) (:foreground "magenta4"))))
  '(cperl-hash-face ((((class color) (background light)) (:foreground "steelblue" :bold t))))
  '(cperl-nonoverridable-face ((((class color) (background light)) (:foreground "navy"))))
+
  '(font-latex-bold-face ((t (:weight bold))))
  '(font-latex-italic-face ((t (:slant italic))))
  '(font-latex-string-face ((t (:foreground "green4"))))
