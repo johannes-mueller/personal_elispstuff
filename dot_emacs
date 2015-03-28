@@ -64,6 +64,7 @@
  '(dired-omit-files-p t t)
  '(global-font-lock-mode t nil (font-lock))
  '(global-hl-line-mode 1)
+ '(global-linum-mode t)
  '(gnuserv-program (concat exec-directory "/gnuserv"))
  '(inferior-S+5-program-name "R")
  '(line-number-mode t)

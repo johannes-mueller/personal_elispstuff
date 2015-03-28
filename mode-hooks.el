@@ -81,14 +81,17 @@
 		      ;; Set dired-x global variables here.  For example:
 		      ;; (setq dired-guess-shell-gnutar "gtar")
 		      ;; (setq dired-x-hands-off-my-keys nil)
+		      (linum-mode 0)
 		      )))
 (add-hook 'dired-mode-hook
 	  (function (lambda ()
 		      ;; Set dired-x buffer-local variables here.  For example:
 		      ;; (setq dired-omit-files-p t)
+		      (linum-mode 0)
 		      )))
 
 (add-hook 'magit-mode-hook
 	  (lambda()
 	  (setq ediff-diff-program "~/.lisp.gnu/ediff-diff.sh")
+	  (linum-mode 0)
 	  ))
