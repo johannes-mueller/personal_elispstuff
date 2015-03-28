@@ -27,7 +27,16 @@
 (load "hunspellconf")
 (load "post")
 
+(require 'auto-complete)
+(add-to-list 'ac-dictionary-directories "/usr/share/auto-complete/dict/")
+(require 'auto-complete-config)
+(ac-config-default)
+
 (setq use-dialog-box nil)
+
+(add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
 (server-start)
 
