@@ -8,8 +8,6 @@
 
 ;(define-key global-map [f5]          'fume-list-functions)
 ;(define-key global-map [(meta f5)]   'fume-prompt-function-goto)
-(define-key global-map [f3]          'expand-abbrev-or-dabbrev)
-(define-key global-map [f4]          'change-accent)
 
 (define-key global-map [f9]          'copy-for-paste)
 (define-key global-map [f10]         'paste-copied)

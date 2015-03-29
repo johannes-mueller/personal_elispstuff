@@ -17,8 +17,13 @@
 (require 'scroll-in-place)
 (require 'magit)
 
+(require 'auto-complete)
+(add-to-list 'ac-dictionary-directories "/usr/share/auto-complete/dict/")
+(require 'auto-complete-config)
+(ac-config-default)
+(ac-flyspell-workaround)
+
 (load "mode-hooks")
-(load "abbreviation")
 (load "scrolling")       ;; Ermoeglicht scrollen mit dem Mausrad
 ; FIXME (load "clean_spaces")    ;; entfernt automatisch Blanks am Ende von Zeilen
 (load "copypaste")
@@ -26,11 +31,6 @@
 (load "keys")
 (load "hunspellconf")
 (load "post")
-
-(require 'auto-complete)
-(add-to-list 'ac-dictionary-directories "/usr/share/auto-complete/dict/")
-(require 'auto-complete-config)
-(ac-config-default)
 
 (setq use-dialog-box nil)
 

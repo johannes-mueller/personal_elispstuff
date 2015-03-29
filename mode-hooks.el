@@ -22,17 +22,20 @@
             (turn-on-auto-fill)
             (setq fill-column 79)
 	    (flyspell-mode 1)
+	    (auto-complete-mode 1)
             ))
 
 (add-hook 'markdown-mode-hook
 	  (lambda ()
 	    (flyspell-mode 1)
+	    (auto-complete-mode 1)
 	    ))
 
 (add-hook 'post-mode-hook
 	  (lambda ()
 	    (setq fill-column 75)
 	    (flyspell-mode 1)
+	    (auto-complete-mode 1)
 	    (setq flyspell-generic-check-word-p 'mail-mode-flyspell-verify)
 	    (message "This is post-mode, doofie :-)")
 ))
@@ -43,8 +46,9 @@
 	  (lambda ()
 	   (load "texkram")
 	   (flyspell-mode 1)
-	    (message "This is latex-mode, doofie :-)")
-	    ))
+	   (auto-complete-mode 1)
+	   (message "This is latex-mode, doofie :-)")
+	   ))
 
 
 (add-hook 'c++-mode-hook
