@@ -3,6 +3,10 @@
 (setq ispell-dictionary-alist nil)
 (setq ispell-dictionary-base-alist nil)
 
+(setq load-path (add-to-list 'load-path "~/.emacs.d/site-lisp/auto-dictionary-mode"))
+(require 'auto-dictionary)
+(add-hook 'flyspell-mode-hook (lambda () (auto-dictionary-mode 1)))
+
 (eval-after-load "ispell"
         '(progn (defun ispell-get-coding-system () 'utf-8)))
 
