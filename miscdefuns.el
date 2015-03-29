@@ -23,3 +23,31 @@
   "Kill ARG lines backward."
   (interactive "p")
   (kill-line (- 1 arg)))
+
+
+(defun johmue/detect-ws-backward ()
+  "Delete whitespace until the previous non whitespace."
+  (skip-chars-backward " \t")
+  )
+
+(defun johmue/detect-ws-forward ()
+  "Delete whitespace until the previous non whitespace."
+  (skip-chars-forward " \t")
+  )
+
+(defun johmue/delete-whitespace-impl (fn)
+  (let ((here (point)))
+    (funcall fn)
+    (if (/= (point) here)
+	(delete-region (point) here))
+    ))
+
+(defun johmue/delete-whitespace-backward ()
+  (interactive)
+  (johmue/delete-whitespace-impl 'johmue/detect-ws-backward)
+)
+
+(defun johmue/delete-whitespace-forward ()
+  (interactive)
+  (johmue/delete-whitespace-impl 'johmue/detect-ws-forward)
+)
