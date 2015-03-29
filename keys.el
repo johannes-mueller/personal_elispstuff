@@ -2,9 +2,8 @@
 ;; My global-keys
 ;;
 
-;(define-key global-map C-BS 'backward-kill-word)
-;(define-key global-map  \C-\d    'kill-word)
-;(define-key global-map '(meta delete)       'kill-line)
+(define-key global-map "\M-\d"       'kill-line)
+(global-set-key (kbd "<M-backspace>") 'backward-kill-line)
 
 ;(define-key global-map [f5]          'fume-list-functions)
 ;(define-key global-map [(meta f5)]   'fume-prompt-function-goto)
