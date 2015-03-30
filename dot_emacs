@@ -7,13 +7,6 @@
 (setq load-path (add-to-list 'load-path "~/.emacs.d/site-lisp/magit"))
 (setq load-path (add-to-list 'load-path "~/.emacs.d/site-lisp/dash"))
 
-;;
-;; Use mouse-1 instead of mouse-2 for dragging the scrollbar
-;;
-(global-set-key [vertical-scroll-bar drag-mouse-1] 'scroll-bar-drag)
-(global-set-key [vertical-scroll-bar down-mouse-1] 'scroll-bar-drag)
-
-
 (require 'scroll-in-place)
 (require 'magit)
 
@@ -24,13 +17,10 @@
 (ac-flyspell-workaround)
 
 (load "mode-hooks")
-(load "scrolling")       ;; Ermoeglicht scrollen mit dem Mausrad
-; FIXME (load "clean_spaces")    ;; entfernt automatisch Blanks am Ende von Zeilen
 (load "copypaste")
 (load "miscdefuns")
 (load "keys")
 (load "hunspellconf")
-(load "post")
 
 (setq use-dialog-box nil)
 
