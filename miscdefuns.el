@@ -64,3 +64,17 @@
     (eval-region (line-beginning-position) (line-end-position))
     )
   )
+
+(defun johmue/comment-current-line ()
+  (interactive)
+  (save-excursion
+    (comment-region (line-beginning-position) (line-end-position))
+    )
+  )
+
+(defun johmue/uncomment-current-line ()
+  (interactive)
+  (save-excursion
+    (uncomment-region (line-beginning-position) (line-end-position))
+    )
+  )
