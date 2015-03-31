@@ -8,8 +8,10 @@
 (global-set-key (kbd "<S-backspace>") 'johmue/delete-whitespace-backward)
 (global-set-key (kbd "<S-delete>") 'johmue/delete-whitespace-forward)
 
-;(define-key global-map [f5]          'fume-list-functions)
-;(define-key global-map [(meta f5)]   'fume-prompt-function-goto)
+(global-set-key (kbd "<S-SPC>") 'johmue/mark-current-line)
+
+(global-set-key (kbd "C-c C-l") 'johmue/eval-this-line)
+(global-set-key (kbd "C-c C-d") 'eval-defun)
 
 (define-key global-map [f9]          'copy-for-paste)
 (define-key global-map [f10]         'paste-copied)

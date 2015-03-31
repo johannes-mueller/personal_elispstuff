@@ -51,3 +51,16 @@
   (interactive)
   (johmue/delete-whitespace-impl 'johmue/detect-ws-forward)
 )
+
+(defun johmue/mark-current-line ()
+  (interactive)
+  (beginning-of-line)
+  (set-mark (line-end-position))
+  )
+
+(defun johmue/eval-this-line ()
+  (interactive)
+  (save-excursion
+    (eval-region (line-beginning-position) (line-end-position))
+    )
+  )
