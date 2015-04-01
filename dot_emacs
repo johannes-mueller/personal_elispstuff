@@ -32,6 +32,8 @@
 
 (modify-all-frames-parameters (list (cons 'cursor-type 'bar)))
 
+(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
+
 (server-start)
 
 (custom-set-variables
