@@ -7,6 +7,8 @@
 (setq load-path (add-to-list 'load-path "~/.emacs.d/site-lisp/magit"))
 (setq load-path (add-to-list 'load-path "~/.emacs.d/site-lisp/dash"))
 
+(require 'ido)
+(ido-mode t)
 (require 'scroll-in-place)
 (require 'magit)
 
