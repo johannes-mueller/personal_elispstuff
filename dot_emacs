@@ -45,17 +45,17 @@
   ;; If there is more than one, they won't work right.
  '(make-backup-files nil)
  '(blink-cursor-mode nil)
- '(c-hanging-braces-alist 
-   (quote ((brace-list-open) 
-	   (brace-entry-open) 
-	   (statement-cont) 
-	   (substatement-open after) 
-	   (block-close . c-snug-do-while) 
-	   (extern-lang-open after) 
-	   (namespace-open after) 
-	   (module-open after) 
-	   (composition-open after) 
-	   (inexpr-class-open after) 
+ '(c-hanging-braces-alist
+   (quote ((brace-list-open)
+	   (brace-entry-open)
+	   (statement-cont)
+	   (substatement-open after)
+	   (block-close . c-snug-do-while)
+	   (extern-lang-open after)
+	   (namespace-open after)
+	   (module-open after)
+	   (composition-open after)
+	   (inexpr-class-open after)
 	   (inexpr-class-close before))))
  '(case-fold-search t)
  '(column-number-mode t)
@@ -73,11 +73,11 @@
  '(paren-mode (quote paren) nil (paren))
  '(show-paren-mode t nil (paren))
  '(speedbar-show-unknown-files t)
- '(speedbar-supported-extension-expressions 
-   (quote 
-    (".[ch]\\(\\+\\+\\|pp\\|c\\|h\\|xx\\)?" ".tex\\(i\\(nfo\\)?\\)?" 
-     ".el" ".emacs" ".l" ".li?sp" ".p" ".java" ".f\\(90\\|77\\|or\\)?" 
-     ".ada" ".p[lm]" ".tcl" ".m" ".scm" ".pm" ".py" ".s?html" ".ma?k" 
+ '(speedbar-supported-extension-expressions
+   (quote
+    (".[ch]\\(\\+\\+\\|pp\\|c\\|h\\|xx\\)?" ".tex\\(i\\(nfo\\)?\\)?"
+     ".el" ".emacs" ".l" ".li?sp" ".p" ".java" ".f\\(90\\|77\\|or\\)?"
+     ".ada" ".p[lm]" ".tcl" ".m" ".scm" ".pm" ".py" ".s?html" ".ma?k"
      "makefile\\(\\.in\\|\\.am\\)?")))
  '(tool-bar-mode nil nil (tool-bar))
  '(toolbar-visible-p nil)
@@ -90,20 +90,20 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
- '(default ((t 
-	     (:inherit nil 
-		       :stipple nil 
-		       :background "LightYellow" 
-		       :foreground "black" 
-		       :inverse-video nil 
-		       :box nil 
-		       :strike-through nil 
-		       :overline nil 
-		       :underline nil 
-		       :slant normal 
-		       :weight normal 
-		       :height 98 
-		       :width normal 
+ '(default ((t
+	     (:inherit nil
+		       :stipple nil
+		       :background "LightYellow"
+		       :foreground "black"
+		       :inverse-video nil
+		       :box nil
+		       :strike-through nil
+		       :overline nil
+		       :underline nil
+		       :slant normal
+		       :weight normal
+		       :height 98
+		       :width normal
 		       :foundry "adobe" :family "Source Code Pro")
 	     )))
  '(cperl-array-face ((((class color) (background light)) (:foreground "magenta4"))))
