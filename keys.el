@@ -16,8 +16,8 @@
 (global-set-key (kbd "C-c C-k") 'comment-region)
 (global-set-key (kbd "C-c k") 'uncomment-region)
 
-(global-set-key (kbd "C-c C-j") 'johmue/comment-current-line)
-(global-set-key (kbd "C-c j") 'johmue/uncomment-current-line)
+(global-set-key (kbd "C-c C-;") 'johmue/comment-current-line)
+(global-set-key (kbd "C-c ;") 'johmue/uncomment-current-line)
 
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
