@@ -8,7 +8,12 @@
 (setq load-path (add-to-list 'load-path "~/.emacs.d/site-lisp/dash"))
 
 (require 'ido)
-(ido-mode t)
+(setq ido-enable-flex-matching t)
+(setq ido-everywhere 1)
+(setq ido-create-new-buffer 'always)
+(ido-mode 1)
+
+
 (require 'scroll-in-place)
 (require 'magit)
 
