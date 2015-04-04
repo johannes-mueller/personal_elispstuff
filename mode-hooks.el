@@ -29,6 +29,15 @@
 	  (lambda ()
 	    (flyspell-mode 1)
 	    (auto-complete-mode 1)
+	    (pandoc-mode 1)
+	    ))
+
+(add-hook 'pandoc-mode-hook
+	  (lambda ()
+	    (flyspell-mode 1)
+	    (auto-complete-mode 1)
+	    (setq pandoc-data-dir "~/.lisp.gnu/pandoc")
+	    (pandoc-load-default-settings)
 	    ))
 
 (add-hook 'post-mode-hook
