@@ -93,6 +93,11 @@
 	    )
 )
 
+(add-hook 'python-mode-hook
+	  (lambda ()
+	    (define-key python-mode-map (kbd "<C-backspace>") 'backward-kill-word)
+	    ))
+
 (add-hook 'dired-load-hook
 	  (function (lambda ()
 		      (load "dired-x")
@@ -102,6 +107,7 @@
 		      ;; (setq dired-x-hands-off-my-keys nil)
 		      (linum-mode 0)
 		      )))
+
 (add-hook 'dired-mode-hook
 	  (function (lambda ()
 		      ;; Set dired-x buffer-local variables here.  For example:
