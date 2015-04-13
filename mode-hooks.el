@@ -62,10 +62,12 @@
 
 (add-hook 'c++-mode-hook
 	  (lambda ()
-	    (load "cc-engine.elc")
 	    ; (load "my-kde-devel")
 					;(load "kde-devel-emacs.elc")
-
+	    (setq-default c-basic-offset 8 c-default-style "linux")
+	    (setq-default tab-width 8 indent-tabs-mode nil)
+	    (define-key c-mode-base-map (kbd "RET") 'newline-and-indent)
+	    (imenu-add-to-menubar-index)
 	    (c-set-offset 'innamespace 0)
 	    )
 )
