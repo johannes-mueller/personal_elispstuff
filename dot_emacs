@@ -4,6 +4,8 @@
 
 
 (setq load-path (add-to-list 'load-path "~/.lisp.gnu"))
+(setq load-path (add-to-list 'load-path "~/.emacs.d/site-lisp/magit"))
+(setq load-path (add-to-list 'load-path "~/.emacs.d/site-lisp/dash"))
 
 (require 'ido)
 (setq ido-enable-flex-matching t)
@@ -11,7 +13,9 @@
 (setq ido-create-new-buffer 'always)
 (ido-mode 1)
 
+
 (require 'scroll-in-place)
+(require 'magit)
 
 (require 'auto-complete)
 (add-to-list 'ac-dictionary-directories "/usr/share/auto-complete/dict/")
