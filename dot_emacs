@@ -16,6 +16,7 @@
 
 (require 'scroll-in-place)
 (require 'magit)
+(setq magit-last-seen-setup-instructions "1.4.0")
 
 (require 'auto-complete)
 (add-to-list 'ac-dictionary-directories "/usr/share/auto-complete/dict/")
