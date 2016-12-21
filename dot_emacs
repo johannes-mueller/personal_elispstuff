@@ -42,6 +42,7 @@
 (setq use-dialog-box nil)
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
+(add-hook 'after-init-hook #'global-flycheck-mode)
 
 (add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
