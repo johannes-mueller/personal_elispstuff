@@ -78,3 +78,16 @@
     (uncomment-region (line-beginning-position) (line-end-position))
     )
   )
+
+(defun johmue/scroll-other-window-one-down ()
+  (interactive)
+  (scroll-other-window 1)
+  )
+
+(defun johmue/scroll-other-window-one-up ()
+  (interactive)
+  (scroll-other-window-down 1)
+  )
+
+(provide 'miscdefuns)
+;;; miscdefuns.el ends here

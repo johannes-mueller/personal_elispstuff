@@ -24,6 +24,9 @@
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 
+(define-key global-map [(meta up)] 'johmue/scroll-other-window-one-up)
+(define-key global-map [(meta down)] 'johmue/scroll-other-window-one-down)
+
 (define-key global-map [f9]          'copy-for-paste)
 (define-key global-map [f10]         'paste-copied)
 
