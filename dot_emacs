@@ -7,11 +7,13 @@
 (setq load-path (add-to-list 'load-path "~/.emacs.d/site-lisp/magit"))
 (setq load-path (add-to-list 'load-path "~/.emacs.d/site-lisp/dash"))
 
-(require 'ido)
-(setq ido-enable-flex-matching t)
-(setq ido-everywhere 1)
-(setq ido-create-new-buffer 'always)
-(ido-mode 1)
+(require 'helm-config)
+(global-set-key (kbd "C-x b") 'helm-buffers-list)
+(global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "M-y") 'helm-show-kill-ring)
+(global-set-key (kbd "C-x C-f") 'helm-find-files)
+
+(define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
 
 
 (require 'scroll-in-place)
