@@ -88,6 +88,7 @@
  '(mouse-wheel-follow-mouse t)
  '(mouse-wheel-mode t nil (mwheel))
  '(paren-mode (quote paren) nil (paren))
+ '(rust-indent-offset 8)
  '(show-paren-mode t nil (paren))
  '(speedbar-show-unknown-files t)
  '(speedbar-supported-extension-expressions
