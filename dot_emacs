@@ -14,6 +14,8 @@
 
 (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
 
+(powerline-default-theme)
+
 
 (require 'scroll-in-place)
 (require 'magit)
@@ -131,6 +133,10 @@
  '(hyper-apropos-documentation ((((class color) (background light)) (:foreground "black"))))
  '(info-node ((t (:foreground "navy" :bold t))))
  '(magit-item-highlight ((t (:background "#ffffaa"))))
+ '(powerline-active1 ((t (:background "grey22" :foreground "white"))))
+ '(powerline-active2 ((t (:background "grey40" :foreground "white"))))
+ '(powerline-inactive1 ((t (:background "grey11" :foreground "white"))))
+ '(powerline-inactive2 ((t (:background "grey20" :foreground "gainsboro"))))
  '(rainbow-delimiters-depth-1-face ((t (:foreground "black"))))
  '(rainbow-delimiters-depth-2-face ((t (:foreground "dark red"))))
  '(rainbow-delimiters-depth-3-face ((t (:foreground "dark olive green"))))
