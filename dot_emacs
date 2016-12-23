@@ -155,3 +155,5 @@
 (setq minibuffer-max-depth nil)
 
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
+
+(message "Init completed")
