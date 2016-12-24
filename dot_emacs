@@ -80,6 +80,7 @@
      (inexpr-class-open after)
      (inexpr-class-close before))))
  '(case-fold-search t)
+ '(inhibit-startup-screen t)
  '(column-number-mode t)
  '(cperl-indent-level 8)
  '(dired-omit-files-p t t)
