@@ -27,12 +27,12 @@
 
 (defun johmue/detect-ws-backward ()
   "Delete whitespace until the previous non whitespace."
-  (skip-chars-backward " \t")
+  (skip-chars-backward " \t\r\n")
   )
 
 (defun johmue/detect-ws-forward ()
   "Delete whitespace until the previous non whitespace."
-  (skip-chars-forward " \t")
+  (skip-chars-forward " \t\r\n")
   )
 
 (defun johmue/delete-whitespace-impl (fn)
