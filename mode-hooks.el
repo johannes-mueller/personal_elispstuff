@@ -100,6 +100,12 @@
 	    (define-key python-mode-map (kbd "<C-backspace>") 'backward-kill-word)
 	    ))
 
+(add-hook 'rust-mode-hook
+	  (lambda ()
+	    (cargo-minor-mode)
+	    (setq flychek-checker 'cargo)
+	    ))
+
 (add-hook 'dired-load-hook
 	  (function (lambda ()
 		      (load "dired-x")

@@ -42,6 +42,7 @@
 (load "miscdefuns")
 (load "keys")
 (load "hunspellconf")
+(load "flycheck-cargo")
 
 (setq use-dialog-box nil)
 
