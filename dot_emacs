@@ -15,7 +15,7 @@
 (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
 
 (powerline-default-theme)
-
+(minimap-mode)
 
 (require 'scroll-in-place)
 (require 'magit)
@@ -80,16 +80,17 @@
      (inexpr-class-open after)
      (inexpr-class-close before))))
  '(case-fold-search t)
- '(inhibit-startup-screen t)
  '(column-number-mode t)
  '(cperl-indent-level 8)
  '(dired-omit-files-p t t)
+ '(dired-omit-mode t t)
  '(global-font-lock-mode t nil (font-lock))
  '(global-hl-line-mode 1)
  '(global-linum-mode t)
  '(gnuserv-program (concat exec-directory "/gnuserv"))
  '(haskell-indent-spaces 8)
  '(inferior-S+5-program-name "R")
+ '(inhibit-startup-screen t)
  '(line-number-mode t)
  '(load-home-init-file t t)
  '(lua-indent-level 8)
@@ -103,6 +104,7 @@
  '(speedbar-supported-extension-expressions
    (quote
     (".[ch]\\(\\+\\+\\|pp\\|c\\|h\\|xx\\)?" ".tex\\(i\\(nfo\\)?\\)?" ".el" ".emacs" ".l" ".li?sp" ".p" ".java" ".f\\(90\\|77\\|or\\)?" ".ada" ".p[lm]" ".tcl" ".m" ".scm" ".pm" ".py" ".s?html" ".ma?k" "makefile\\(\\.in\\|\\.am\\)?")))
+ '(split-width-threshold 200)
  '(tool-bar-mode nil nil (tool-bar))
  '(toolbar-visible-p nil)
  '(visible-bell t)
