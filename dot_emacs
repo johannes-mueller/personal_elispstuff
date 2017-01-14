@@ -4,7 +4,10 @@
 
 
 (setq load-path (add-to-list 'load-path "~/.lisp.gnu"))
+
 (package-initialize)
+
+(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
 
 (require 'helm)
 (global-set-key (kbd "C-x b") 'helm-buffers-list)
@@ -13,11 +16,13 @@
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 
 (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
+(with-eval-after-load "helm-files"
+  (define-key helm-find-files-map (kbd "<C-backspace>") 'helm-find-files-up-one-level))
 
 (powerline-default-theme)
 (minimap-mode)
 
-(require 'scroll-in-place)
+;(require 'scroll-in-place)
 (require 'magit)
 (setq magit-last-seen-setup-instructions "1.4.0")
 
@@ -158,6 +163,5 @@
 (set-fontset-font t 'unicode "Symbola" nil 'prepend)
 (setq minibuffer-max-depth nil)
 
-(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
 
 (message "Init completed")
