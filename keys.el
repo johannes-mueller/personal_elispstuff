@@ -30,6 +30,8 @@
 (define-key global-map [f9]          'copy-for-paste)
 (define-key global-map [f10]         'paste-copied)
 
+(define-key global-map [f12] 'johmue/make)
+
 ;(define-key global-map [f11]         'ispell-buffer)
 ;(define-key global-map [(meta f11)]  'flyspell-auto-correct-word)
 

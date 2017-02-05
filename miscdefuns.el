@@ -89,5 +89,11 @@
   (scroll-other-window-down 1)
   )
 
+
+(defun johmue/make ()
+  (interactive)
+  (compile "make")
+  )
+
 (provide 'miscdefuns)
 ;;; miscdefuns.el ends here
