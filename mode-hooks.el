@@ -80,7 +80,8 @@
 
 (add-hook 'c-mode-common-hook
 	  (lambda ()
-	    (c-toggle-auto-hungry-state 1)
+	    (c-toggle-auto-hungry-state nil)
+	    (c-toggle-auto-newline nil)
 	    (setq c-basic-offset 8)
 	    )
 )
