@@ -20,7 +20,7 @@
   (define-key helm-find-files-map (kbd "<C-backspace>") 'helm-find-files-up-one-level))
 
 (powerline-default-theme)
-(minimap-mode)
+;(minimap-mode)
 
 (require 'scroll-in-place)
 (require 'magit)
@@ -47,7 +47,7 @@
 (load "miscdefuns")
 (load "keys")
 (load "hunspellconf")
-(load "flycheck-cargo")
+;(load "flycheck-cargo")
 
 (setq use-dialog-box nil)
 
@@ -164,6 +164,6 @@
 
 (set-fontset-font t 'unicode "Symbola" nil 'prepend)
 (setq minibuffer-max-depth nil)
-
+(setq compilation-scroll-output 'first-error)
 
 (message "Init completed")
