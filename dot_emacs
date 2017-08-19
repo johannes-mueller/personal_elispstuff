@@ -9,15 +9,19 @@
 
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
 
-(require 'helm)
-(global-set-key (kbd "C-x b") 'helm-buffers-list)
-(global-set-key (kbd "M-x") 'helm-M-x)
-(global-set-key (kbd "M-y") 'helm-show-kill-ring)
-(global-set-key (kbd "C-x C-f") 'helm-find-files)
+;; (require 'helm)
+;; (global-set-key (kbd "C-x b") 'helm-buffers-list)
+;; (global-set-key (kbd "M-x") 'helm-M-x)
+;; (global-set-key (kbd "M-y") 'helm-show-kill-ring)
+;; (global-set-key (kbd "C-x C-f") 'helm-find-files)
 
-(define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
-(with-eval-after-load "helm-files"
-  (define-key helm-find-files-map (kbd "<C-backspace>") 'helm-find-files-up-one-level))
+;; (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
+;; (with-eval-after-load "helm-files"
+;;   (define-key helm-find-files-map (kbd "<C-backspace>") 'helm-find-files-up-one-level))
+
+(setq ido-enable-flex-matching t)
+(setq ido-everywhere t)
+(ido-mode 1)
 
 (powerline-default-theme)
 ;(minimap-mode)
@@ -99,12 +103,16 @@
  '(haskell-indent-spaces 8)
  '(inferior-S+5-program-name "R")
  '(inhibit-startup-screen t)
+ '(js-indent-level 8)
  '(line-number-mode t)
  '(load-home-init-file t t)
  '(lua-indent-level 8)
  '(make-backup-files nil)
  '(mouse-wheel-follow-mouse t)
  '(mouse-wheel-mode t nil (mwheel))
+ '(package-selected-packages
+   (quote
+    (ido-hacks ido-vertical-mode n3-mode dtrt-indent ac-helm ac-html ac-html-angular ac-html-bootstrap ac-html-csswatcher ac-math ac-php ac-php-core auto-complete auto-complete-c-headers web-completion-data web-mode helm-projectile projectile projectile-codesearch projectile-git-autofetch projectile-speedbar which-key undo-tree powerline pandoc-mode multiple-cursors minimap markdown-mode+ magit helm-themes helm-pydoc helm-css-scss ghci-completion ghc-imported-from ghc flycheck-rust flycheck-pyflakes flycheck-pos-tip flycheck-perl6 flycheck-haskell flycheck-cython flycheck-cstyle flycheck-css-colorguard flycheck-clangcheck cargo auto-dictionary)))
  '(paren-mode (quote paren) nil (paren))
  '(rust-indent-offset 8)
  '(show-paren-mode t nil (paren))
