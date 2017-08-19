@@ -46,6 +46,8 @@
 (require 'undo-tree)
 (global-undo-tree-mode)
 
+(projectile-mode)
+
 (load "mode-hooks")
 (load "copypaste")
 (load "miscdefuns")

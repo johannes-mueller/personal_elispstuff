@@ -134,3 +134,8 @@
 	  (setq ediff-diff-program "~/.lisp.gnu/ediff-diff.sh")
 	  (linum-mode 0)
 	  ))
+
+
+(projectile-register-project-type 'waf '("waf")
+                  :compile "./waf build"
+                  :test "./waf test")
