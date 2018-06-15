@@ -109,8 +109,11 @@
 (add-hook 'rust-mode-hook
 	  (lambda ()
 	    (cargo-minor-mode)
-	    (setq flychek-checker 'cargo)
+	   ; (setq flychek-checker 'cargo)
 	    ))
+
+(with-eval-after-load 'rust-mode
+  (add-hook 'flycheck-mode-hook #'flycheck-rust-setup))
 
 (add-hook 'dired-load-hook
 	  (function (lambda ()
