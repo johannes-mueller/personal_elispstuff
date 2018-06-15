@@ -36,6 +36,8 @@
 (ac-config-default)
 (setq ac-auto-start 4)
 (ac-flyspell-workaround)
+(define-key ac-completing-map "\t" 'ac-complete)
+(define-key ac-completing-map "\r" nil)
 
 (require 'mmm-mode)
 (setq mmm-global-mode 'maybe)
