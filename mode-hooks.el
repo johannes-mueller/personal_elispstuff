@@ -85,6 +85,7 @@
 	    (setq-default c-basic-offset 8 c-default-style "linux")
 	    (setq-default c-indentation-style "linux")
 	    (setq-default tab-width 8 indent-tabs-mode t)
+	    (setq indent-tabs-mode t)
 	    (define-key c-mode-base-map (kbd "RET") 'newline-and-indent)
 ;	    (imenu-add-to-menubar-index)
             (message "c-common-mode-hook")
