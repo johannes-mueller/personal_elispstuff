@@ -95,5 +95,12 @@
   (compile "make")
   )
 
+
+(defun johmue/jump-to-project ()
+  (projectile-dired)
+  (projectile-vc)
+  )
+
 (provide 'miscdefuns)
+
 ;;; miscdefuns.el ends here

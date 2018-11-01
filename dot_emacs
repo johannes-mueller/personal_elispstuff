@@ -54,7 +54,7 @@
 (global-undo-tree-mode)
 
 (projectile-mode)
-(setq projectile-switch-project-action #'projectile-vc)
+(setq projectile-switch-project-action #'johmue/jump-to-project)
 (helm-projectile-on)
 (which-function-mode)
 
