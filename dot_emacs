@@ -16,6 +16,12 @@
 (with-eval-after-load "helm-files"
   (define-key helm-find-files-map (kbd "<C-backspace>") 'helm-find-files-up-one-level))
 
+(add-to-list 'display-buffer-alist
+	     `(,(rx bos "*helm" (* not-newline) "*" eos)
+	       (display-buffer-in-side-window)
+	       (inhibit-same-window . t)
+	       (window-height . 0.4)))
+
 ;; (setq ido-enable-flex-matching t)
 ;; (setq ido-everywhere t)
 ;; (ido-mode 1)
@@ -48,6 +54,7 @@
 (global-undo-tree-mode)
 
 (projectile-mode)
+(setq projectile-switch-project-action #'projectile-vc)
 (helm-projectile-on)
 (which-function-mode)
 
@@ -106,6 +113,7 @@
  '(global-linum-mode t)
  '(gnuserv-program (concat exec-directory "/gnuserv"))
  '(haskell-indent-spaces 8)
+ '(helm-ag-base-command "rg --vimgrep --no-heading --smart-case")
  '(inferior-S+5-program-name "R")
  '(inhibit-startup-screen t)
  '(js-indent-level 8)
@@ -117,8 +125,9 @@
  '(mouse-wheel-mode t nil (mwheel))
  '(package-selected-packages
    (quote
-    (flyspell-correct-helm helm-ag helm-ag-r helm-dired-history helm-dired-recent-dirs helm-flymake helm-grepint helm-ls-git helm-make helm-swoop beacon n3-mode dtrt-indent ac-helm ac-html ac-html-angular ac-html-bootstrap ac-html-csswatcher ac-math ac-php ac-php-core auto-complete auto-complete-c-headers web-completion-data web-mode helm-projectile projectile projectile-codesearch projectile-git-autofetch projectile-speedbar which-key undo-tree powerline pandoc-mode multiple-cursors minimap markdown-mode+ magit helm-themes helm-pydoc helm-css-scss ghci-completion ghc-imported-from ghc flycheck-rust flycheck-pyflakes flycheck-pos-tip flycheck-perl6 flycheck-haskell flycheck-cython flycheck-cstyle flycheck-css-colorguard flycheck-clangcheck cargo auto-dictionary)))
+    (projectile-ripgrep helm-rg yaml-mode helm-ag helm-dired-history helm-dired-recent-dirs helm-ext helm-flycheck helm-flymake helm-flyspell helm-git helm-git-files helm-git-grep helm-gitignore helm-helm-commands helm-ls-git helm-make helm-swoop helm-tail lua-mode beacon auctex ido-hacks ido-vertical-mode n3-mode dtrt-indent ac-helm ac-html ac-html-angular ac-html-bootstrap ac-html-csswatcher ac-math ac-php ac-php-core auto-complete auto-complete-c-headers web-completion-data web-mode helm-projectile projectile projectile-codesearch projectile-git-autofetch projectile-speedbar which-key undo-tree powerline pandoc-mode multiple-cursors minimap markdown-mode+ magit helm-themes helm-pydoc helm-css-scss ghci-completion ghc-imported-from ghc flycheck-rust flycheck-pyflakes flycheck-pos-tip flycheck-perl6 flycheck-haskell flycheck-cython flycheck-cstyle flycheck-css-colorguard flycheck-clangcheck cargo auto-dictionary)))
  '(paren-mode (quote paren) nil (paren))
+ '(projectile-keymap-prefix (kbd "C-c p"))
  '(rust-indent-offset 8)
  '(show-paren-mode t nil (paren))
  '(speedbar-show-unknown-files t)
