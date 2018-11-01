@@ -54,4 +54,14 @@
 
 (define-key projectile-mode-map [f12] 'projectile-compile-project)
 (define-key projectile-mode-map (kbd "C-c p") #'projectile-command-map)
+
+(global-set-key (kbd "C-x b") 'helm-buffers-list)
+(global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "M-y") 'helm-show-kill-ring)
+(global-set-key (kbd "C-x C-f") 'helm-find-files)
+(global-set-key (kbd "C-:") 'ac-complete-with-helm)
+(define-key ac-complete-mode-map (kbd "C-:") 'ac-complete-with-helm)
+(global-set-key (kbd "M-s") 'helm-swoop-from-isearch)
+
+
 ;;; keys.el ends here
