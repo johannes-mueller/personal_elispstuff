@@ -5,10 +5,10 @@
 (define-key global-map "\M-\d"       'kill-line)
 (global-set-key (kbd "<M-backspace>") 'backward-kill-line)
 
-(global-set-key (kbd "<S-backspace>") 'johmue/delete-whitespace-backward)
-(global-set-key (kbd "<S-delete>") 'johmue/delete-whitespace-forward)
+(global-set-key (kbd "<s-backspace>") 'johmue/delete-whitespace-backward)
+(global-set-key (kbd "<s-delete>") 'johmue/delete-whitespace-forward)
 
-(global-set-key (kbd "<S-SPC>") 'johmue/mark-current-line)
+(global-set-key (kbd "<s-SPC>") 'johmue/mark-current-line)
 
 (global-set-key (kbd "C-c C-l") 'johmue/eval-this-line)
 (global-set-key (kbd "C-c C-d") 'eval-defun)
@@ -29,12 +29,6 @@
 
 (define-key global-map [f9]          'copy-for-paste)
 (define-key global-map [f10]         'paste-copied)
-
-(eval-after-load "cc-mode"
-  '(progn
-     (define-key c-mode-base-map [f12] 'johmue/make)
-     )
-  )
 
 (eval-after-load "rust-mode"
   '(progn
