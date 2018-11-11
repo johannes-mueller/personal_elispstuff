@@ -30,12 +30,7 @@
 (define-key global-map [f9]          'copy-for-paste)
 (define-key global-map [f10]         'paste-copied)
 
-(eval-after-load "rust-mode"
-  '(progn
-     (define-key rust-mode-map [f12] 'cargo-process-build)
-     )
-  )
-;(define-key global-map [f11]         'ispell-buffer)
+					;(define-key global-map [f11]         'ispell-buffer)
 ;(define-key global-map [(meta f11)]  'flyspell-auto-correct-word)
 
 ;(define-key global-map '(meta control kp-right) 'bigframe)
@@ -47,6 +42,7 @@
 (define-key global-map [(meta g)] 'magit-status)
 
 (define-key projectile-mode-map [f12] 'projectile-compile-project)
+(define-key projectile-mode-map [S-f12] 'projectile-test-project)
 (define-key projectile-mode-map (kbd "C-c p") #'projectile-command-map)
 
 (global-set-key (kbd "C-x b") 'helm-buffers-list)

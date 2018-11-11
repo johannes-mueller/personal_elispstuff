@@ -97,7 +97,7 @@
 
 
 (defun johmue/jump-to-project ()
-  (projectile-dired)
+  (term-projectile-create-new)
   (projectile-vc)
   )
 
