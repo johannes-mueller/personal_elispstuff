@@ -5,8 +5,8 @@
 (define-key global-map "\M-\d"       'kill-line)
 (global-set-key (kbd "<M-backspace>") 'backward-kill-line)
 
-(global-set-key (kbd "<s-backspace>") 'johmue/delete-whitespace-backward)
-(global-set-key (kbd "<s-delete>") 'johmue/delete-whitespace-forward)
+(global-set-key (kbd "<S-backspace>") 'johmue/delete-whitespace-backward)
+(global-set-key (kbd "<S-delete>") 'johmue/delete-whitespace-forward)
 
 (global-set-key (kbd "<s-SPC>") 'johmue/mark-current-line)
 
