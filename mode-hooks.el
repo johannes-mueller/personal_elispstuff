@@ -143,3 +143,8 @@
 (projectile-register-project-type 'waf '("waf")
                   :compile "./waf build"
                   :test "./waf test")
+
+(add-hook 'term-mode-hook
+	  (lambda()
+	    (term-set-escape-char ?\C-x)
+	    ))
