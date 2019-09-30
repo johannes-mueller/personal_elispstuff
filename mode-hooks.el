@@ -139,6 +139,23 @@
 	  (linum-mode 0)
 	  ))
 
+(require 'sql-indent)
+
+(add-hook 'sql-mode-hook
+	  (lambda()
+	    (sqlind-minor-mode)
+	    (setq sqlind-basic-offset 8)
+	    ))
+
+(defvar my-sql-indentation-offsets-alist
+  `((defun-start 0)
+   ,@sqlind-default-indentation-offsets-alist))
+
+(add-hook 'sqlind-minor-mode-hook
+    (lambda ()
+       (setq sqlind-indentation-offsets-alist
+             my-sql-indentation-offsets-alist)))
+
 
 (projectile-register-project-type 'waf '("waf")
                   :compile "./waf build"
