@@ -102,11 +102,6 @@
 	    )
 )
 
-(add-hook 'python-mode-hook
-	  (lambda ()
-	    (define-key python-mode-map (kbd "<C-backspace>") 'backward-kill-word)
-	    ))
-
 (add-hook 'conda-postactivate-hook 'johmue/switch-to-ipython-if-possible)
 (add-hook 'conda-postdeactivate-hook 'johmue/switch-to-python)
 
@@ -169,3 +164,10 @@
                   :compile "./waf build"
                   :test "./waf test")
 
+(projectile-register-project-type 'rust-cargo '("Cargo.toml")
+                                  :compile "cargo build"
+                                  :test "RUST_BACKTRACE=1 cargo test -- --nocapture")
+
+(projectile-register-project-type 'python-pytest '("pytest.ini")
+                                  :compile "pytest -v"
+                                  :test "pytest -v")

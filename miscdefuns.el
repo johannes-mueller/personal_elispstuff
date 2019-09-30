@@ -157,6 +157,20 @@
       (johmue/switch-to-python))))
 
 
+
+(defvar johmue/pytest-arg-hist nil)
+
+(defun johmue/run-pytest (args)
+  (interactive
+   (list
+    (read-from-minibuffer "additional args for pytest: "
+			  (car johmue/pytest-arg-hist) nil nil
+			  'johmue/pytest-arg-hist)))
+  ;(message "command is '%s'" (concat "pytest -v " args))
+  (compile (concat "pytest -v " args))
+  )
+
+
 (provide 'miscdefuns)
 
 ;;; miscdefuns.el ends here
