@@ -7,6 +7,8 @@
 
 (global-set-key (kbd "<S-backspace>") 'johmue/delete-whitespace-backward)
 (global-set-key (kbd "<S-delete>") 'johmue/delete-whitespace-forward)
+(global-set-key (kbd "<S-left>") 'johmue/jump-whitespace-backward)
+(global-set-key (kbd "<S-right>") 'johmue/jump-whitespace-forward)
 
 (global-set-key (kbd "<s-SPC>") 'johmue/mark-current-line)
 

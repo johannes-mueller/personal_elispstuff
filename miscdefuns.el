@@ -52,6 +52,16 @@
   (johmue/delete-whitespace-impl 'johmue/detect-ws-forward)
 )
 
+(defun johmue/jump-whitespace-backward ()
+  (interactive)
+  (johmue/detect-ws-backward)
+)
+
+(defun johmue/jump-whitespace-forward ()
+  (interactive)
+  (johmue/detect-ws-forward)
+)
+
 (defun johmue/mark-current-line ()
   (interactive)
   (beginning-of-line)
