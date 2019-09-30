@@ -52,7 +52,10 @@
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
 (global-set-key (kbd "C-:") 'ac-complete-with-helm)
-(define-key ac-complete-mode-map (kbd "C-:") 'ac-complete-with-helm)
+(global-set-key (kbd "s-<tab>") 'ac-complete-with-helm)
+(define-key ac-completing-map [end] 'ac-complete)
+(define-key ac-completing-map [right] 'ac-complete)
+(define-key ac-completing-map "\r" nil)
 
 (global-set-key (kbd "M-s") 'helm-swoop-from-isearch)
 (global-set-key (kbd "C-f") 'helm-swoop-without-pre-input)

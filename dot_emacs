@@ -41,11 +41,6 @@
 (setq ac-auto-start 4)
 (ac-flyspell-workaround)
 (setq ac-auto-start nil)
-(global-set-key (kbd "<s-tab>") 'ac-complete-with-helm)
-(define-key ac-complete-mode-map (kbd "<s-tab>") 'ac-complete-with-helm)
-(define-key ac-completing-map [end] 'ac-complete)
-(define-key ac-completing-map [right] 'ac-complete)
-(define-key ac-completing-map "\r" nil)
 
 (require 'mmm-mode)
 (setq mmm-global-mode 'maybe)
