@@ -107,8 +107,10 @@
 
 
 (defun johmue/jump-to-project ()
-  (term-projectile-create-new)
+  (dired ".")
   (projectile-vc)
+  (other-window 1)
+)
   )
 
 (provide 'miscdefuns)
