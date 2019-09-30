@@ -107,6 +107,9 @@
 	    (define-key python-mode-map (kbd "<C-backspace>") 'backward-kill-word)
 	    ))
 
+(add-hook 'conda-postactivate-hook 'johmue/switch-to-ipython-if-possible)
+(add-hook 'conda-postdeactivate-hook 'johmue/switch-to-python)
+
 (add-hook 'rust-mode-hook
 	  (lambda ()
 	    (cargo-minor-mode)

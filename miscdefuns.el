@@ -111,7 +111,51 @@
   (projectile-vc)
   (other-window 1)
 )
+
+(defun johmue/switch-to-ipython ()
+  (setq
+   python-shell-interpreter "ipython"
+   python-shell-interpreter-args "-i --simple-prompt"
+   python-shell-prompt-regexp "In \\[[0-9]+\\]: "
+   python-shell-prompt-output-regexp "Out\\[[0-9]+\\]: "
+   python-shell-completion-setup-code
+   "from IPython.core.completerlib import module_completion"
+   python-shell-completion-module-string-code
+   "';'.join(module_completion('''%s'''))\n"
+   python-shell-completion-string-code
+   "';'.join(get_ipython().Completer.all_completions('''%s'''))\n")
+)
+
+(defun johmue/switch-to-python ()
+  (setq
+   python-shell-interpreter "python"
+   python-shell-interpreter-args "-i"
+   python-shell-prompt-regexp ""
+   python-shell-prompt-output-regexp ""
+   python-shell-completion-setup-code ""
+   python-shell-completion-module-string-code ""
+   python-shell-completion-string-code "")
   )
+
+(require 'f)
+
+(defun johmue/switch-to-ipython-if-possible ()
+  (interactive)
+  (let ((ipython-executable-path
+	 (concat
+	  (file-name-as-directory
+	   (if (file-accessible-directory-p (expand-file-name conda-env-current-name))
+	       (expand-file-name conda-env-current-name)
+	     (concat (file-name-as-directory
+		      (expand-file-name (conda-env-default-location)))
+		     conda-env-current-name)))
+	   (file-name-as-directory conda-env-executables-dir)
+	   "ipython")))
+    (message "path: %s" ipython-executable-path)
+    (if (f-executable? ipython-executable-path)
+	(johmue/switch-to-ipython)
+      (johmue/switch-to-python))))
+
 
 (provide 'miscdefuns)
 
