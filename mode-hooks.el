@@ -139,6 +139,11 @@
 	  (linum-mode 0)
 	  ))
 
+(add-hook 'term-mode-hook
+	  (lambda()
+	    (term-set-escape-char ?\C-x)
+	    ))
+
 (require 'sql-indent)
 
 (add-hook 'sql-mode-hook
@@ -161,7 +166,3 @@
                   :compile "./waf build"
                   :test "./waf test")
 
-(add-hook 'term-mode-hook
-	  (lambda()
-	    (term-set-escape-char ?\C-x)
-	    ))
