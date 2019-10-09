@@ -102,6 +102,12 @@
 	    )
 )
 
+(add-hook 'python-mode-hook
+	  (lambda ()
+	    (define-key python-mode-map (kbd "<C-backspace>") 'backward-kill-word)
+	    (define-key python-mode-map [M-f12] 'johmue/run-pytest)
+	    ))
+
 (add-hook 'conda-postactivate-hook 'johmue/switch-to-ipython-if-possible)
 (add-hook 'conda-postdeactivate-hook 'johmue/switch-to-python)
 

@@ -47,9 +47,6 @@
 (define-key projectile-mode-map [S-f12] 'projectile-test-project)
 (define-key projectile-mode-map (kbd "C-c p") #'projectile-command-map)
 
-(define-key python-mode-map (kbd "<C-backspace>") 'backward-kill-word)
-(define-key python-mode-map [M-f12] 'johmue/run-pytest)
-
 (global-set-key (kbd "C-x b") 'helm-buffers-list)
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
