@@ -1,3 +1,11 @@
+;;; hunspellconf.el --- Settings for hunspell
+
+;;; Commentary:
+
+;; Nothing special
+
+;;; Code:
+
 (setq-default ispell-program-name "hunspell")
 
 (eval-after-load "ispell"
@@ -8,4 +16,4 @@
 (require 'auto-dictionary)
 (add-hook 'flyspell-mode-hook (lambda () (auto-dictionary-mode 1)))
 
-
+;;; hunspellconf.el ends here
