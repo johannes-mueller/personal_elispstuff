@@ -35,12 +35,14 @@
 
 (require 'auto-complete)
 (add-to-list 'ac-dictionary-directories "/usr/share/auto-complete/dict/")
+(add-to-list 'ac-sources 'ac-source-jedi-direct)
 (require 'auto-complete-config)
 (require 'ac-helm)
 (ac-config-default)
-(setq ac-auto-start 4)
+(setq ac-auto-start 2)
 (ac-flyspell-workaround)
-(setq ac-auto-start nil)
+;(setq ac-auto-start nil)
+
 
 (require 'mmm-mode)
 (setq mmm-global-mode 'maybe)

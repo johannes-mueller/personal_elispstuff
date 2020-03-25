@@ -54,7 +54,8 @@
 (global-set-key (kbd "C-:") 'ac-complete-with-helm)
 (global-set-key (kbd "s-<tab>") 'ac-complete-with-helm)
 (define-key ac-completing-map [end] 'ac-complete)
-(define-key ac-completing-map [right] 'ac-complete)
+(define-key ac-completing-map [right] 'ac-expand)
+(define-key ac-completing-map [S-return] 'ac-complete)
 (define-key ac-completing-map "\r" nil)
 
 (global-set-key (kbd "M-s") 'helm-swoop-from-isearch)
