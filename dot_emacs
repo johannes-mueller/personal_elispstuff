@@ -65,6 +65,9 @@
 
 (setq use-dialog-box nil)
 
+(add-hook 'after-init-hook (lambda ()
+  (when (fboundp 'auto-dim-other-buffers-mode)
+    (auto-dim-other-buffers-mode t))))
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (add-hook 'after-init-hook #'global-flycheck-mode)
 (which-key-mode)
@@ -145,7 +148,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "LightYellow" :foreground "black" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 98 :width normal :foundry "adobe" :family "Source Code Pro"))))
+ '(default ((t (:inherit nil :stipple nil :background "LightYellow" :foreground "black" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 80 :width normal :foundry "SRC" :family "Hack"))))
+ '(auto-dim-other-buffers-face ((t (:background "lemon chiffon"))))
  '(cperl-array-face ((((class color) (background light)) (:foreground "magenta4"))))
  '(cperl-hash-face ((((class color) (background light)) (:foreground "steelblue" :bold t))))
  '(cperl-nonoverridable-face ((((class color) (background light)) (:foreground "navy"))))
