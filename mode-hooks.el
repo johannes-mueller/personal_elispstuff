@@ -106,6 +106,10 @@
 	  (lambda ()
 	    (define-key python-mode-map (kbd "<C-backspace>") 'backward-kill-word)
 	    (define-key python-mode-map [M-f12] 'johmue/run-pytest)
+	    (jedi:setup)
+	    (jedi:ac-setup)
+	    (setq jedi:complete-on-dot t)
+	    (message "python-mode called")
 	    ))
 
 (add-hook 'conda-postactivate-hook 'johmue/switch-to-ipython-if-possible)
@@ -177,3 +181,10 @@
 (projectile-register-project-type 'python-pytest '("pytest.ini")
                                   :compile "pytest -v"
                                   :test "pytest -v")
+
+(require 'auto-virtualenv)
+(add-hook 'python-mode-hook 'auto-virtualenv-set-virtualenv)
+(add-hook 'projectile-after-switch-project-hook 'auto-virtualenv-set-virtualenv)
+
+
+;;; mode-hooks.el ends here
