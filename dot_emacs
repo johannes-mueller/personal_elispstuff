@@ -128,6 +128,8 @@
  '(make-backup-files nil)
  '(mouse-wheel-follow-mouse t)
  '(mouse-wheel-mode t nil (mwheel))
+ '(nxml-child-indent 8)
+ '(nxml-outline-child-indent 8)
  '(paren-mode (quote paren) nil (paren))
  '(projectile-keymap-prefix (kbd "C-c p"))
  '(show-paren-mode t nil (paren))
