@@ -51,17 +51,12 @@
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
-(global-set-key (kbd "C-:") 'ac-complete-with-helm)
-(global-set-key (kbd "s-<tab>") 'ac-complete-with-helm)
-(define-key ac-completing-map [end] 'ac-complete)
-(define-key ac-completing-map [right] 'ac-expand)
-(define-key ac-completing-map [S-return] 'ac-complete)
-(define-key ac-completing-map "\r" nil)
 
 (global-set-key (kbd "M-s") 'helm-swoop-from-isearch)
 (global-set-key (kbd "C-f") 'helm-swoop-without-pre-input)
 
 (global-set-key [f7] 'helm-projectile-rg)
 (global-set-key [M-f7] 'helm-projectile-grep)
+
 
 ;;; keys.el ends here

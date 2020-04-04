@@ -33,15 +33,11 @@
 (require 'magit)
 (setq magit-last-seen-setup-instructions "1.4.0")
 
-(require 'auto-complete)
-(add-to-list 'ac-dictionary-directories "/usr/share/auto-complete/dict/")
-(add-to-list 'ac-sources 'ac-source-jedi-direct)
-(require 'auto-complete-config)
-(require 'ac-helm)
-(ac-config-default)
-(setq ac-auto-start 2)
-(ac-flyspell-workaround)
-;(setq ac-auto-start nil)
+(add-hook 'after-init-hook 'global-company-mode)
+(setq rtags-completions-enabled t)
+(setq company-idle-delay 0)
+(setq rtags-autostart-diagnostics t)
+(rtags-enable-standard-keybindings)
 
 
 (require 'mmm-mode)
@@ -57,6 +53,13 @@
 (setq projectile-switch-project-action #'johmue/jump-to-project)
 (helm-projectile-on)
 (which-function-mode)
+
+(elpy-enable)
+(autoload 'python-mode "python-mode" "Python Mode." t)
+(add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
+(add-to-list 'interpreter-mode-alist '("python" . python-mode))
+
+(require 'rtags-xref)
 
 (load "mode-hooks")
 (load "copypaste")
@@ -112,6 +115,9 @@
      (inexpr-class-close before))))
  '(case-fold-search t)
  '(column-number-mode t)
+ '(company-backends
+   (quote
+    (company-rtags company-clang company-irony-c-headers company-irony company-jedi)))
  '(cperl-indent-level 8)
  '(dired-omit-files-p t t)
  '(dired-omit-mode t t)
@@ -124,7 +130,6 @@
  '(inferior-S+5-program-name "R")
  '(inhibit-startup-screen t)
  '(js-indent-level 8)
- '(line-number-mode t)
  '(load-home-init-file t t)
  '(lua-indent-level 8)
  '(make-backup-files nil)
@@ -132,6 +137,9 @@
  '(mouse-wheel-mode t nil (mwheel))
  '(nxml-child-indent 8)
  '(nxml-outline-child-indent 8)
+ '(package-selected-packages
+   (quote
+    (company-anaconda company-bibtex company-math company-reftex flycheck-clang-analyzer rust-auto-use company-racer racer pungi yasnippet-snippets flycheck-rtags rtags-xref company-irony-c-headers flycheck-irony irony-eldoc isearch-project company-arduino company-auctex company-c-headers company-ctags company-dict company-emoji company-fuzzy company-jedi company-lua company-php company-rtags company-statistics company-web helm-company helm-ctest helm-fd helm-rtags helm-xref projectile-direnv projectile-variable treemacs treemacs-magit treemacs-projectile auto-virtualenv auto-dim-other-buffers jedi flycheck-yamllint pandoc rustic multi-web-mode web-mode-edit-element ttl-mode toml-mode flymake-rust web-mode fzf term-projectile projectile-ripgrep helm-rg yaml-mode helm-ag helm-dired-history helm-dired-recent-dirs helm-ext helm-flycheck helm-flymake helm-flyspell helm-git helm-git-files helm-git-grep helm-gitignore helm-helm-commands helm-ls-git helm-make helm-swoop helm-tail lua-mode beacon auctex ido-hacks ido-vertical-mode n3-mode dtrt-indent ac-helm ac-html ac-html-angular ac-html-bootstrap ac-html-csswatcher ac-math ac-php ac-php-core auto-complete auto-complete-c-headers web-completion-data helm-projectile projectile-codesearch projectile-git-autofetch projectile-speedbar which-key undo-tree powerline pandoc-mode multiple-cursors minimap markdown-mode+ helm-themes helm-pydoc helm-css-scss ghci-completion ghc-imported-from ghc flycheck-rust flycheck-pyflakes flycheck-pos-tip flycheck-perl6 flycheck-haskell flycheck-cython flycheck-cstyle flycheck-css-colorguard flycheck-clangcheck cargo auto-dictionary)))
  '(paren-mode (quote paren) nil (paren))
  '(projectile-keymap-prefix (kbd "C-c p"))
  '(show-paren-mode t nil (paren))
@@ -143,12 +151,7 @@
  '(tool-bar-mode nil nil (tool-bar))
  '(toolbar-visible-p nil)
  '(visible-bell t)
- '(w3m-coding-system (quote utf-8))
- '(package-selected-packages
-   (quote
-    (ttl-mode toml-mode flymake-rust web-mode fzf term-projectile projectile-ripgrep helm-rg yaml-mode helm-ag helm-dired-history helm-dired-recent-dirs helm-ext helm-flycheck helm-flymake helm-flyspell helm-git helm-git-files helm-git-grep helm-gitignore helm-helm-commands helm-ls-git helm-make helm-swoop helm-tail lua-mode beacon auctex ido-hacks ido-vertical-mode n3-mode dtrt-indent ac-helm ac-html ac-html-angular ac-html-bootstrap ac-html-csswatcher ac-math ac-php ac-php-core auto-complete auto-complete-c-headers web-completion-data helm-projectile projectile-codesearch projectile-git-autofetch projectile-speedbar which-key undo-tree powerline pandoc-mode multiple-cursors minimap markdown-mode+ helm-themes helm-pydoc helm-css-scss ghci-completion ghc-imported-from ghc flycheck-rust flycheck-pyflakes flycheck-pos-tip flycheck-perl6 flycheck-haskell flycheck-cython flycheck-cstyle flycheck-css-colorguard flycheck-clangcheck cargo auto-dictionary)))
-
- )
+ '(w3m-coding-system (quote utf-8)))
 ;;
 ;;
 (custom-set-faces

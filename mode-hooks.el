@@ -87,10 +87,15 @@
 	    (setq-default tab-width 8 indent-tabs-mode t)
 	    (setq indent-tabs-mode t)
 	    (define-key c-mode-base-map (kbd "RET") 'newline-and-indent)
-;	    (imenu-add-to-menubar-index)
+	    (rtags-start-process-unless-running)
+	    (irony-mode)
             (message "c-common-mode-hook")
 	    )
 )
+(add-hook 'c-mode-common-hook #'rtags-xref-enable)
+
+
+(add-hook 'irony-mode-hook 'company-irony-setup-begin-commands)
 
 (add-hook 'cperl-mode-hook
 	  (lambda ()
@@ -120,6 +125,8 @@
 	    (cargo-minor-mode)
 	   ; (setq flychek-checker 'cargo)
 	    ))
+(add-hook 'rust-mode-hook #'racer-mode)
+(add-hook 'racer-mode-hook #'eldoc-mode)
 
 (with-eval-after-load 'rust-mode
   (add-hook 'flycheck-mode-hook #'flycheck-rust-setup))
@@ -171,8 +178,8 @@
 
 
 (projectile-register-project-type 'waf '("waf")
-                  :compile "./waf build"
-                  :test "./waf test")
+                  :compile "LANG=C ./waf build"
+                  :test "LANG=C ./waf test")
 
 (projectile-register-project-type 'rust-cargo '("Cargo.toml")
                                   :compile "cargo build"
