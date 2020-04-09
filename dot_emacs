@@ -117,7 +117,12 @@
  '(column-number-mode t)
  '(company-backends
    (quote
-    (company-rtags company-clang company-irony-c-headers company-irony company-jedi)))
+    ((company-rtags company-irony-c-headers company-irony company-capf mescompany-dabbrev)
+     (company-jedi company-irony company-capf company-dabbrev)
+     (company-web-html company-ispell company-css company-ispell company-capf company-dabbrv)
+     (company-racer company-capf company-dabbrv)
+     (company-auctex company-reftex company-mathcompany-ispell company-capf company-dabbrv)
+     (company-ispell company-capf company-dabbrev))))
  '(cperl-indent-level 8)
  '(dired-omit-files-p t t)
  '(dired-omit-mode t t)
