@@ -55,6 +55,7 @@
 	  (lambda ()
 	   (load "texkram")
 	   (flyspell-mode 1)
+	   (rainbow-delimiters-mode)
 	   (message "This is latex-mode, doofie :-)")
 	   ))
 
@@ -88,6 +89,7 @@
 	    (define-key c-mode-base-map (kbd "RET") 'newline-and-indent)
 	    (rtags-start-process-unless-running)
 	    (irony-mode)
+	   (rainbow-delimiters-mode)
             (message "c-common-mode-hook")
 	    )
 )
@@ -102,6 +104,7 @@
 	    (cperl-define-key 'backspace 'cperl-electric-backspace)
 	    (cperl-define-key '[(control c) (control c)] 'comment-region)
 	    (cperl-define-key '[(control c) (control u)] 'uncomment-region)
+	   (rainbow-delimiters-mode)
 	    (setq cperl-indent-level 8)
 	    )
 )
@@ -111,6 +114,7 @@
 	    (define-key python-mode-map (kbd "<C-backspace>") 'backward-kill-word)
 	    (define-key python-mode-map [M-f12] 'johmue/run-pytest)
 	    (jedi:setup)
+	    (rainbow-delimiters-mode)
 	    (setq jedi:complete-on-dot t)
 	    (message "python-mode called")
 	    ))
@@ -121,6 +125,7 @@
 (add-hook 'rust-mode-hook
 	  (lambda ()
 	    (cargo-minor-mode)
+	    (rainbow-delimiters-mode)
 	   ; (setq flychek-checker 'cargo)
 	    ))
 (add-hook 'rust-mode-hook #'racer-mode)
@@ -162,6 +167,7 @@
 (add-hook 'sql-mode-hook
 	  (lambda()
 	    (sqlind-minor-mode)
+	    (rainbow-delimiters-mode)
 	    (setq sqlind-basic-offset 8)
 	    ))
 
