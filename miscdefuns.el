@@ -110,6 +110,7 @@
   (dired ".")
   (projectile-vc)
   (other-window 1)
+  (setq projectile-mode-line-function '(lambda () (format " <%s>" (projectile-project-name))))
 )
 
 (defun johmue/switch-to-ipython ()

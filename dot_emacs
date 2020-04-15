@@ -102,6 +102,17 @@
 
 (server-start)
 
+(delight '((abbrev-mode " Abv" "abbrev")
+           (smart-tab-mode " \\t" "smart-tab")
+           (eldoc-mode nil "eldoc")
+           (rainbow-mode)
+           (overwrite-mode " Ov" t)
+	   (undo-tree-mode nil "undo-tree")
+	   (auto-dim-other-buffers-mode nil "auto-dim-other-buffers")
+	   (which-key-mode nil "which-key")
+	   (auto-revert-mode nil t)
+           (emacs-lisp-mode "Elisp" :major)))
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -215,5 +226,7 @@
 (set-fontset-font t 'unicode "Symbola" nil 'prepend)
 (setq minibuffer-max-depth nil)
 (setq compilation-scroll-output 'first-error)
+(setq projectile-mode-line-function '(lambda () (format " <%s>" (projectile-project-name))))
+
 
 (message "Init completed")
