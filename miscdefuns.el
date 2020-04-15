@@ -172,6 +172,15 @@
   )
 
 
+(defun johmue/update-elpa-keyring ()
+  (interactive)
+  (setq package-check-signature nil)
+  (gnu-elpa-keyring-update)
+  (setq package-check-signature 'allow-unsigned)
+)
+
+
+
 (provide 'miscdefuns)
 
 ;;; miscdefuns.el ends here
