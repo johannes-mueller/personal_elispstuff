@@ -40,6 +40,7 @@
 (setq rtags-autostart-diagnostics t)
 (rtags-enable-standard-keybindings)
 
+(auto-complete-mode -1)
 
 (require 'mmm-mode)
 (setq mmm-global-mode 'maybe)

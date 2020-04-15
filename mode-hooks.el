@@ -55,7 +55,6 @@
 	  (lambda ()
 	   (load "texkram")
 	   (flyspell-mode 1)
-	   (auto-complete-mode 1)
 	   (message "This is latex-mode, doofie :-)")
 	   ))
 
@@ -112,7 +111,6 @@
 	    (define-key python-mode-map (kbd "<C-backspace>") 'backward-kill-word)
 	    (define-key python-mode-map [M-f12] 'johmue/run-pytest)
 	    (jedi:setup)
-	    (jedi:ac-setup)
 	    (setq jedi:complete-on-dot t)
 	    (message "python-mode called")
 	    ))
