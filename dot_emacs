@@ -54,12 +54,18 @@
 (projectile-mode)
 (setq projectile-switch-project-action #'johmue/jump-to-project)
 (helm-projectile-on)
+
 (which-function-mode)
 
 (elpy-enable)
-(autoload 'python-mode "python-mode" "Python Mode." t)
-(add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
-(add-to-list 'interpreter-mode-alist '("python" . python-mode))
+
+(setq elpy-rpc-backend "jedi")
+(setq elpy-modules '(elpy-module-company
+                     elpy-module-eldoc
+                     elpy-module-pyvenv
+                     elpy-module-yasnippet
+                     elpy-module-sane-defaults))
+
 
 (require 'rtags-xref)
 
