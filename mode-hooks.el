@@ -187,7 +187,7 @@
 
 (projectile-register-project-type 'rust-cargo '("Cargo.toml")
                                   :compile "cargo build"
-                                  :test "RUST_BACKTRACE=1 cargo test -- --nocapture")
+                                  :test "RUST_BACKTRACE=1 cargo test --tests -- --nocapture")
 
 (projectile-register-project-type 'python-pytest '("pytest.ini")
                                   :compile "pytest -v"
