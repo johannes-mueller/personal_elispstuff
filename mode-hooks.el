@@ -88,8 +88,8 @@
 	    (setq indent-tabs-mode t)
 	    (define-key c-mode-base-map (kbd "RET") 'newline-and-indent)
 	    (rtags-start-process-unless-running)
-	    (irony-mode)
-	   (rainbow-delimiters-mode)
+	    ;(irony-mode)
+	    (rainbow-delimiters-mode)
             (message "c-common-mode-hook")
 	    )
 )
@@ -128,8 +128,11 @@
 	    (rainbow-delimiters-mode)
 	   ; (setq flychek-checker 'cargo)
 	    ))
-(add-hook 'rust-mode-hook #'racer-mode)
-(add-hook 'racer-mode-hook #'eldoc-mode)
+
+(add-hook 'rust-mode-hook #'lsp)
+;(add-hook 'rust-mode-hook #'racer-mode)
+;(add-hook 'racer-mode-hook #'eldoc-mode)
+(add-hook 'rust-mode-hook 'cargo-minor-mode)
 
 (with-eval-after-load 'rust-mode
   (add-hook 'flycheck-mode-hook #'flycheck-rust-setup))

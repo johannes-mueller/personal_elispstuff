@@ -140,8 +140,9 @@
  '(column-number-mode t)
  '(company-backends
    (quote
-    ((company-rtags company-irony-c-headers company-irony company-capf company-dabbrev)
-     (company-jedi company-irony company-capf company-dabbrev)
+    ((company-lsp)
+     (company-rtags company-capf company-dabbrev)
+     (company-jedi company-capf company-dabbrev)
      (company-web-html company-ispell company-css company-ispell company-capf company-dabbrv)
      (company-racer company-capf company-dabbrv)
      (company-auctex company-reftex company-mathcompany-ispell company-capf company-dabbrv)
