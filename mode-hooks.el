@@ -126,6 +126,7 @@
 	  (lambda ()
 	    (cargo-minor-mode)
 	    (rainbow-delimiters-mode)
+	    (setq indent-tabs-mode nil)
 	   ; (setq flychek-checker 'cargo)
 	    ))
 
