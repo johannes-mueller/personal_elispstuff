@@ -102,6 +102,8 @@
 
 (add-to-list 'auto-mode-alist '("\\.ino\\'" . c++-mode))
 
+(add-to-list 'auto-mode-alist '("\\.ttl\\'" . ttl-mode))
+
 (modify-all-frames-parameters (list (cons 'cursor-type 'bar)))
 
 (server-start)
