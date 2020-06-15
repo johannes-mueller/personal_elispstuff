@@ -12,7 +12,7 @@
 
 (require 'helm)
 (require 'helm-projectile)
-
+(helm-fuzzier-mode 1)
 (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
 (with-eval-after-load "helm-files"
   (define-key helm-find-files-map (kbd "<C-backspace>") 'helm-find-files-up-one-level))
@@ -159,7 +159,6 @@
      (company-ispell company-capf company-dabbrev))))
  '(compilation-skip-threshold 2)
  '(cperl-indent-level 8)
- '(dired-omit-files-p t t)
  '(dired-omit-mode t t)
  '(global-font-lock-mode t nil (font-lock))
  '(global-hl-line-mode 1)
@@ -180,7 +179,7 @@
  '(nxml-outline-child-indent 8)
  '(package-selected-packages
    (quote
-    (sfz-mode dap-mode ruby-end smartparens popwin flycheck-elixir lsp-elixir mix alchemist flycheck-credo ssh-agency rainbow-delimiters elpy company-irony jedi-core jedi-direx string-inflection realgud realgud-ipdb company-anaconda company-bibtex company-math company-reftex flycheck-clang-analyzer rust-auto-use company-racer racer pungi yasnippet-snippets flycheck-rtags rtags-xref company-irony-c-headers flycheck-irony irony-eldoc isearch-project company-arduino company-auctex company-c-headers company-ctags company-dict company-emoji company-fuzzy company-jedi company-lua company-php company-rtags company-statistics company-web helm-company helm-ctest helm-fd helm-rtags helm-xref projectile-direnv projectile-variable treemacs treemacs-magit treemacs-projectile auto-virtualenv auto-dim-other-buffers jedi flycheck-yamllint pandoc rustic multi-web-mode web-mode-edit-element ttl-mode toml-mode flymake-rust web-mode fzf term-projectile projectile-ripgrep helm-rg yaml-mode helm-ag helm-dired-history helm-dired-recent-dirs helm-ext helm-flycheck helm-flymake helm-flyspell helm-git helm-git-files helm-git-grep helm-gitignore helm-helm-commands helm-ls-git helm-make helm-swoop helm-tail lua-mode beacon auctex ido-hacks ido-vertical-mode n3-mode dtrt-indent ac-helm ac-html ac-html-angular ac-html-bootstrap ac-html-csswatcher ac-math ac-php ac-php-core auto-complete auto-complete-c-headers web-completion-data helm-projectile projectile-codesearch projectile-git-autofetch projectile-speedbar which-key undo-tree powerline pandoc-mode multiple-cursors minimap markdown-mode+ helm-themes helm-pydoc helm-css-scss ghci-completion ghc-imported-from ghc flycheck-rust flycheck-pyflakes flycheck-pos-tip flycheck-perl6 flycheck-haskell flycheck-cython flycheck-cstyle flycheck-css-colorguard flycheck-clangcheck cargo auto-dictionary)))
+    (elixir-yasnippets f3 helm-c-yasnippet helm-fuzzier helm-unicode fill-column-indicator highlight-indent-guides sfz-mode dap-mode ruby-end smartparens popwin flycheck-elixir lsp-elixir mix alchemist flycheck-credo ssh-agency rainbow-delimiters elpy company-irony jedi-core jedi-direx string-inflection realgud realgud-ipdb company-anaconda company-bibtex company-math company-reftex flycheck-clang-analyzer rust-auto-use company-racer racer pungi yasnippet-snippets flycheck-rtags rtags-xref company-irony-c-headers flycheck-irony irony-eldoc isearch-project company-arduino company-auctex company-c-headers company-ctags company-dict company-emoji company-fuzzy company-jedi company-lua company-php company-rtags company-statistics company-web helm-company helm-ctest helm-fd helm-rtags helm-xref projectile-direnv projectile-variable treemacs treemacs-magit treemacs-projectile auto-virtualenv auto-dim-other-buffers jedi flycheck-yamllint pandoc rustic multi-web-mode web-mode-edit-element ttl-mode toml-mode web-mode fzf term-projectile projectile-ripgrep helm-rg yaml-mode helm-ag helm-dired-history helm-dired-recent-dirs helm-ext helm-flycheck helm-flyspell helm-git helm-git-files helm-git-grep helm-gitignore helm-helm-commands helm-ls-git helm-make helm-swoop helm-tail lua-mode beacon auctex ido-hacks ido-vertical-mode n3-mode dtrt-indent ac-helm ac-html ac-html-angular ac-html-bootstrap ac-html-csswatcher ac-math ac-php ac-php-core auto-complete auto-complete-c-headers web-completion-data helm-projectile projectile-codesearch projectile-git-autofetch projectile-speedbar which-key undo-tree powerline pandoc-mode multiple-cursors minimap markdown-mode+ helm-themes helm-pydoc helm-css-scss ghci-completion ghc-imported-from ghc flycheck-rust flycheck-pyflakes flycheck-pos-tip flycheck-perl6 flycheck-haskell flycheck-cython flycheck-cstyle flycheck-css-colorguard flycheck-clangcheck cargo auto-dictionary)))
  '(paren-mode (quote paren) nil (paren))
  '(projectile-keymap-prefix (kbd "C-c p"))
  '(show-paren-mode t nil (paren))
@@ -200,7 +199,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "LightYellow" :foreground "black" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 90 :width normal :family "Roboto Mono"))))
+ '(default ((t (:inherit nil :stipple nil :background "LightYellow" :foreground "black" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 80 :width normal :family "Roboto Mono"))))
  '(auto-dim-other-buffers-face ((t (:background "lemon chiffon"))))
  '(cperl-array-face ((((class color) (background light)) (:foreground "magenta4"))))
  '(cperl-hash-face ((((class color) (background light)) (:foreground "steelblue" :bold t))))
