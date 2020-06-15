@@ -92,8 +92,8 @@
   (when (fboundp 'auto-dim-other-buffers-mode)
     (auto-dim-other-buffers-mode t))))
 
-(setq split-width-threshold 0)
-(setq split-height-threshold 9999)
+(setq split-width-threshold 210)
+(setq split-height-threshold 100)
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (add-hook 'after-init-hook #'global-flycheck-mode)
