@@ -221,6 +221,7 @@
  '(hl-line ((t (:background "#eefaff"))))
  '(hyper-apropos-documentation ((((class color) (background light)) (:foreground "black"))))
  '(info-node ((t (:foreground "navy" :bold t))))
+ '(lsp-ui-sideline-code-action ((t (:foreground "magenta"))))
  '(magit-item-highlight ((t (:background "#ffffaa"))))
  '(powerline-active1 ((t (:background "grey22" :foreground "white"))))
  '(powerline-active2 ((t (:background "grey40" :foreground "white"))))
