@@ -127,6 +127,8 @@
 	    (cargo-minor-mode)
 	    (rainbow-delimiters-mode)
 	    (setq indent-tabs-mode nil)
+	    (fci-mode)
+	    (setq fci-rule-column 100)
 	   ; (setq flychek-checker 'cargo)
 	    ))
 
