@@ -122,6 +122,12 @@
 (add-hook 'conda-postactivate-hook 'johmue/switch-to-ipython-if-possible)
 (add-hook 'conda-postdeactivate-hook 'johmue/switch-to-python)
 
+
+(add-hook 'rust-mode-hook #'lsp)
+;(add-hook 'rust-mode-hook #'racer-mode)
+;(add-hook 'racer-mode-hook #'eldoc-mode)
+(add-hook 'rust-mode-hook 'cargo-minor-mode)
+
 (add-hook 'rust-mode-hook
 	  (lambda ()
 	    (cargo-minor-mode)
@@ -131,11 +137,6 @@
 	    (setq fci-rule-column 100)
 	   ; (setq flychek-checker 'cargo)
 	    ))
-
-(add-hook 'rust-mode-hook #'lsp)
-;(add-hook 'rust-mode-hook #'racer-mode)
-;(add-hook 'racer-mode-hook #'eldoc-mode)
-(add-hook 'rust-mode-hook 'cargo-minor-mode)
 
 (with-eval-after-load 'rust-mode
   (add-hook 'flycheck-mode-hook #'flycheck-rust-setup))
