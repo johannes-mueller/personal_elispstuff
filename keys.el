@@ -45,6 +45,7 @@
 ;(define-key global-map '(meta control kp-left) 'normalframe)
 ;(define-key global-map '(meta control kp-4) 'normalframe)
 
+(define-key global-map (kbd "C-c c") 'python-pytest-popup)
 
 (define-key global-map [(meta g)] 'magit-status)
 

@@ -12,7 +12,7 @@
 
 (require 'helm)
 (require 'helm-projectile)
-(helm-fuzzier-mode 1)
+;(helm-fuzzier-mode 1)
 (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
 (with-eval-after-load "helm-files"
   (define-key helm-find-files-map (kbd "<C-backspace>") 'helm-find-files-up-one-level))

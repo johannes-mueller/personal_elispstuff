@@ -6,10 +6,6 @@
       (append '(("\\.tmpl$"    . html-helper-mode)) auto-mode-alist))
 (setq auto-mode-alist
       (append '(("\\.pl$"    . cperl-mode)) auto-mode-alist))
-(setq auto-mode-alist
-      (append '(("^/tmp/mutt-"    . post-mode)) auto-mode-alist))
-(setq auto-mode-alist
-      (append '(("\.article\.[0-9]*"    . post-mode)) auto-mode-alist))
 
 ;(load-library "lilypond-mode.el")
 ;(setq auto-mode-alist
@@ -39,15 +35,6 @@
 	    (setq pandoc-data-dir "~/.lisp.gnu/pandoc")
 	    (pandoc-load-default-settings)
 	    ))
-
-(add-hook 'post-mode-hook
-	  (lambda ()
-	    (setq fill-column 75)
-	    (flyspell-mode 1)
-	    (auto-complete-mode 1)
-	    (setq flyspell-generic-check-word-p 'mail-mode-flyspell-verify)
-	    (message "This is post-mode, doofie :-)")
-))
 
 ;==========================
 ;My LaTeX Settings
