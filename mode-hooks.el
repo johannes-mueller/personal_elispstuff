@@ -99,7 +99,7 @@
 (add-hook 'python-mode-hook
 	  (lambda ()
 	    (define-key python-mode-map (kbd "<C-backspace>") 'backward-kill-word)
-	    (define-key python-mode-map [M-f12] 'johmue/run-pytest)
+	    (define-key python-mode-map [M-f12] 'python-pytest-popup)
 	    (jedi:setup)
 	    (rainbow-delimiters-mode)
 	    (setq jedi:complete-on-dot t)
@@ -109,6 +109,8 @@
 (add-hook 'conda-postactivate-hook 'johmue/switch-to-ipython-if-possible)
 (add-hook 'conda-postdeactivate-hook 'johmue/switch-to-python)
 
+(add-hook 'python-mode-hook #'lsp)
+(setq lsp-pyls-configuration-sources ["flake8"])
 
 (add-hook 'rust-mode-hook #'lsp)
 ;(add-hook 'rust-mode-hook #'racer-mode)
