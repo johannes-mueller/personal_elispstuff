@@ -18,20 +18,17 @@
             (turn-on-auto-fill)
             (setq fill-column 79)
 	    (flyspell-mode 1)
-	    (auto-complete-mode 1)
             ))
 
 (add-hook 'markdown-mode-hook
 	  (lambda ()
 	    (flyspell-mode 1)
-	    (auto-complete-mode 1)
 	    (pandoc-mode 1)
 	    ))
 
 (add-hook 'pandoc-mode-hook
 	  (lambda ()
 	    (flyspell-mode 1)
-	    (auto-complete-mode 1)
 	    (setq pandoc-data-dir "~/.lisp.gnu/pandoc")
 	    (pandoc-load-default-settings)
 	    ))
@@ -100,11 +97,13 @@
 	  (lambda ()
 	    (define-key python-mode-map (kbd "<C-backspace>") 'backward-kill-word)
 	    (define-key python-mode-map [M-f12] 'python-pytest-popup)
-	    (jedi:setup)
+	    (pycoverage-mode)
 	    (rainbow-delimiters-mode)
-	    (setq jedi:complete-on-dot t)
+	    ;(setq jedi:complete-on-dot t)
 	    (message "python-mode called")
 	    ))
+
+(add-hook 'python-pytest-finished-hook 'pycoverage-refresh)
 
 (add-hook 'conda-postactivate-hook 'johmue/switch-to-ipython-if-possible)
 (add-hook 'conda-postdeactivate-hook 'johmue/switch-to-python)

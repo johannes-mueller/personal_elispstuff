@@ -10,6 +10,9 @@
 (global-set-key (kbd "<S-left>") 'johmue/jump-whitespace-backward)
 (global-set-key (kbd "<S-right>") 'johmue/jump-whitespace-forward)
 
+(define-key smartparens-mode-map (kbd "<M-right>") 'sp-forward-sexp)
+(define-key smartparens-mode-map (kbd "<M-left>") 'sp-backward-sexp)
+
 (global-set-key (kbd "<s-SPC>") 'johmue/mark-current-line)
 
 (global-set-key (kbd "C-c C-l") 'johmue/eval-this-line)
@@ -46,6 +49,7 @@
 ;(define-key global-map '(meta control kp-4) 'normalframe)
 
 (define-key global-map (kbd "C-c c") 'python-pytest-popup)
+(define-key python-mode-map [S-f12] 'python-pytest-repeat)
 
 (define-key global-map [(meta g)] 'magit-status)
 

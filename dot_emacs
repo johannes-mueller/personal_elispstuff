@@ -34,13 +34,13 @@
 (require 'magit)
 (setq magit-last-seen-setup-instructions "1.4.0")
 
-(add-hook 'after-init-hook 'global-company-mode)
-(setq rtags-completions-enabled t)
-(setq company-idle-delay 0)
-(setq rtags-autostart-diagnostics t)
-(rtags-enable-standard-keybindings)
-
 (auto-complete-mode -1)
+
+(add-hook 'after-init-hook 'global-company-mode)
+;(setq rtags-completions-enabled t)
+(setq company-idle-delay 0)
+;(setq rtags-autostart-diagnostics t)
+;(rtags-enable-standard-keybindings)
 
 (require 'mmm-mode)
 (setq mmm-global-mode 'maybe)
@@ -65,19 +65,19 @@
 (setq highlight-indent-guides-auto-enabled nil)
 (set-face-foreground 'highlight-indent-guides-character-face "darkgray")
 
-;(smartparens-global-mode)
+(smartparens-global-mode)
+(require 'smartparens-config)
 
-(elpy-enable)
+;(elpy-enable)
 
-(setq elpy-rpc-backend "jedi")
-(setq elpy-modules '(elpy-module-company
-                     elpy-module-eldoc
-                     elpy-module-pyvenv
-                     elpy-module-yasnippet
-                     elpy-module-sane-defaults))
+;(setq elpy-rpc-backend "jedi")
+;(setq elpy-modules '(elpy-module-company
+;                     elpy-module-eldoc
+;                     elpy-module-pyvenv
+;                     elpy-module-yasnippet
+;                     elpy-module-sane-defaults))
 
-
-(require 'rtags-xref)
+;(require 'rtags-xref)
 
 (load "mode-hooks")
 (load "copypaste")
@@ -93,7 +93,7 @@
     (auto-dim-other-buffers-mode t))))
 
 (setq split-width-threshold 210)
-(setq split-height-threshold 100)
+(setq split-height-threshold 150)
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (add-hook 'after-init-hook #'global-flycheck-mode)
@@ -132,6 +132,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ac-modes nil)
  '(blink-cursor-mode nil)
  '(c-hanging-braces-alist
    (quote
@@ -171,6 +172,7 @@
  '(js-indent-level 8)
  '(load-home-init-file t t)
  '(lsp-clients-elixir-server-executable "elixir-ls")
+ '(lsp-keymap-prefix "C-M-l")
  '(lua-indent-level 8)
  '(make-backup-files nil)
  '(mouse-wheel-follow-mouse t)
