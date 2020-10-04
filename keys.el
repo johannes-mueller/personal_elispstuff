@@ -43,6 +43,8 @@
 (global-set-key (kbd "C-x <up>") 'windmove-up)
 (global-set-key (kbd "C-x <down>") 'windmove-down)
 
+(global-set-key (kbd "C-x C-2") 'delete-other-windows-vertically)
+
 ;(define-key global-map [f11]         'ispell-buffer)
 ;(define-key global-map [(meta f11)]  'flyspell-auto-correct-word)
 
