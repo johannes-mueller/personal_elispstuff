@@ -13,6 +13,9 @@
 (define-key smartparens-mode-map (kbd "<M-right>") 'sp-forward-sexp)
 (define-key smartparens-mode-map (kbd "<M-left>") 'sp-backward-sexp)
 
+(global-set-key [(shift up)] 'beginning-of-defun)
+(global-set-key [(shift down)] 'end-of-defun)
+
 (global-set-key (kbd "<s-SPC>") 'johmue/mark-current-line)
 
 (global-set-key (kbd "C-c C-l") 'johmue/eval-this-line)
