@@ -100,7 +100,8 @@
 
 (popwin-mode 1)
 (push '(compilation-mode :noselect t :height 0.3 :position bottom :tail t) popwin:special-display-config)
-(push '("*Help*" :height 0.5 :width 0.33 :position top) popwin:special-display-config)
+(push '("*Help*" :height 0.5 :position top) popwin:special-display-config)
+(push '("*xref*" :height 0.3 :position bottom) popwin:special-display-config)
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (add-hook 'after-init-hook #'global-flycheck-mode)
@@ -135,6 +136,12 @@
 	   (which-key-mode nil "which-key")
 	   (auto-revert-mode nil t)
            (emacs-lisp-mode "Elisp" :major)))
+
+(setq lsp-print-io t)
+(setq xref-prompt-for-identifier '(not xref-find-definitions
+                                       xref-find-definitions-other-window
+                                       xref-find-definitions-other-frame
+                                       xref-find-references))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
