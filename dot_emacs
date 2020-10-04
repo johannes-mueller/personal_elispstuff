@@ -98,6 +98,9 @@
 (setq split-width-threshold 210)
 (setq split-height-threshold 150)
 
+(popwin-mode 1)
+(push '(compilation-mode :noselect t :height 0.3 :position bottom) popwin:special-display-config)
+
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (add-hook 'after-init-hook #'global-flycheck-mode)
 (which-key-mode)
