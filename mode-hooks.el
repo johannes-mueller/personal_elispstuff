@@ -43,6 +43,7 @@
 	   (message "This is latex-mode, doofie :-)")
 	   ))
 
+(add-hook 'prog-mode-hook #'yas-minor-mode)
 
 (add-hook 'c++-mode-hook
 	  (lambda ()
