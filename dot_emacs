@@ -143,8 +143,7 @@
  '(ac-modes nil)
  '(blink-cursor-mode nil)
  '(c-hanging-braces-alist
-   (quote
-    ((brace-list-open)
+   '((brace-list-open)
      (brace-entry-open)
      (statement-cont)
      (substatement-open after)
@@ -154,7 +153,7 @@
      (module-open after)
      (composition-open after)
      (inexpr-class-open after)
-     (inexpr-class-close before))))
+     (inexpr-class-close before)))
  '(case-fold-search t)
  '(column-number-mode t)
  '(company-backends
@@ -191,13 +190,12 @@
  '(show-paren-mode t nil (paren))
  '(speedbar-show-unknown-files t)
  '(speedbar-supported-extension-expressions
-   (quote
-    (".[ch]\\(\\+\\+\\|pp\\|c\\|h\\|xx\\)?" ".tex\\(i\\(nfo\\)?\\)?" ".el" ".emacs" ".l" ".li?sp" ".p" ".java" ".f\\(90\\|77\\|or\\)?" ".ada" ".p[lm]" ".tcl" ".m" ".scm" ".pm" ".py" ".s?html" ".ma?k" "makefile\\(\\.in\\|\\.am\\)?")))
+   '(".[ch]\\(\\+\\+\\|pp\\|c\\|h\\|xx\\)?" ".tex\\(i\\(nfo\\)?\\)?" ".el" ".emacs" ".l" ".li?sp" ".p" ".java" ".f\\(90\\|77\\|or\\)?" ".ada" ".p[lm]" ".tcl" ".m" ".scm" ".pm" ".py" ".s?html" ".ma?k" "makefile\\(\\.in\\|\\.am\\)?"))
  '(split-width-threshold 200)
  '(tool-bar-mode nil nil (tool-bar))
  '(toolbar-visible-p nil)
  '(visible-bell t)
- '(w3m-coding-system (quote utf-8)))
+ '(w3m-coding-system 'utf-8))
 ;;
 ;;
 (custom-set-faces
