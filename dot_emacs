@@ -62,7 +62,7 @@
 (which-function-mode)
 
 
-(setq gc-cons-threshold 64000000)
+(setq gc-cons-threshold 128000000)
 (setq read-process-output-max (* 1024 1024)) ;; 1mb
 
 (require 'highlight-indent-guides)
