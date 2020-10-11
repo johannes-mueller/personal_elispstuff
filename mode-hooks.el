@@ -47,12 +47,11 @@
 
 (add-hook 'c++-mode-hook
 	  (lambda ()
-	    ; (load "my-kde-devel")
-					;(load "kde-devel-emacs.elc")
 	    (c-set-offset 'innamespace 0)
             (message "c++-mode-hook")
 	    )
 )
+;(add-hook 'c++-mode-hook #'lsp)
 
 (add-hook 'c-mode-hook
 	  (lambda ()
@@ -79,6 +78,7 @@
 	    )
 )
 (add-hook 'c-mode-common-hook #'rtags-xref-enable)
+;(add-hook 'c-mode-common-hook #'lsp)
 
 
 (add-hook 'irony-mode-hook 'company-irony-setup-begin-commands)
