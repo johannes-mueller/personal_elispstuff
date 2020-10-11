@@ -39,6 +39,10 @@
 (add-hook 'after-init-hook 'global-company-mode)
 ;(setq rtags-completions-enabled t)
 (setq company-idle-delay 0)
+(eval-after-load 'company
+  '(progn
+     (define-key company-mode-map (kbd "C-:") 'helm-company)
+     (define-key company-active-map (kbd "C-:") 'helm-company)))
 ;(setq rtags-autostart-diagnostics t)
 ;(rtags-enable-standard-keybindings)
 
