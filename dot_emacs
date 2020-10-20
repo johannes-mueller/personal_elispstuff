@@ -142,7 +142,7 @@
 	   (auto-revert-mode nil t)
            (emacs-lisp-mode "Elisp" :major)))
 
-(setq lsp-print-io t)
+(setq lsp-print-io nil)
 (setq xref-prompt-for-identifier '(not xref-find-definitions
                                        xref-find-definitions-other-window
                                        xref-find-definitions-other-frame
