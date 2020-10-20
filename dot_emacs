@@ -171,8 +171,8 @@
  '(column-number-mode t)
  '(company-backends
    '((company-capf company-yasnippet)
-     (company-web-html company-ispell company-css company-ispell company-capf company-dabbrv)
-     (company-auctex company-reftex company-mathcompany-ispell company-capf company-dabbrv)
+     (company-web-html company-ispell company-css company-ispell company-capf company-dabbrev)
+     ;(company-reftex-labels company-reftex-citations (company-auctex-macros company-auctex-symbols company-auctex-environments) company-math-symbols-latex company-latex-commands company-ispell company-capf company-dabbrev)
      (company-ispell company-capf company-dabbrev)))
  '(compilation-skip-threshold 2)
  '(cperl-indent-level 8)
