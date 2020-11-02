@@ -142,7 +142,7 @@
 	   (auto-revert-mode nil t)
            (emacs-lisp-mode "Elisp" :major)))
 
-(setq lsp-print-io t)
+(setq lsp-print-io nil)
 (setq xref-prompt-for-identifier '(not xref-find-definitions
                                        xref-find-definitions-other-window
                                        xref-find-definitions-other-frame
@@ -177,6 +177,7 @@
  '(compilation-skip-threshold 2)
  '(cperl-indent-level 8)
  '(dired-omit-mode t t)
+ '(gc-cons-threshold 512000000)
  '(global-font-lock-mode t nil (font-lock))
  '(global-hl-line-mode 1)
  '(global-linum-mode t)
