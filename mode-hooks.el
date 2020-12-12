@@ -104,6 +104,9 @@
 	    (message "python-mode called")
 	    ))
 
+(add-hook 'window-configuration-change-hook 'johmue/auto-activate-virtualenv)
+(add-hook 'focus-in-hook 'johmue/auto-activate-virtualenv)
+
 (add-hook 'python-pytest-finished-hook 'pycoverage-refresh)
 
 (add-hook 'conda-postactivate-hook 'johmue/switch-to-ipython-if-possible)

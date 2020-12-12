@@ -158,6 +158,39 @@
       (johmue/switch-to-python))))
 
 
+(defvar johmue/old-path nil)
+(defvar johmue/old-python-home nil)
+
+(defun johmue/auto-activate-virtualenv ()
+  (interactive)
+  (let
+      ((possible-env-dir
+	(concat
+	 (file-name-as-directory
+	  (projectile-ensure-project (projectile-project-root))) ".venv"))
+       (current-path (if johmue/old-path
+			 johmue/old-path
+		       (getenv "PATH")))
+       (current-python-home (if johmue/old-python-home
+				johmue/old-python-home
+			      (let (python-home (getenv "PYTHONHOME"))
+				(if python-home
+				    python-home
+				  "")))))
+    (if (file-directory-p possible-env-dir)
+	(progn
+	  (setq johmue/old-path current-path)
+	  (setq johmue/old-python-home current-python-home)
+	  (setenv "PATH" (concat (file-name-as-directory possible-env-dir) "bin" path-separator current-path))
+	  (setenv "PYTHONHOME")
+	  )
+      (if johmue/old-path
+	  (progn
+	    (setenv "PATH" johmue/old-path)
+	    (setenv "PYTHONHOME" johmue/old-python-home)
+	    (setq johmue/old-path nil)
+	    (setq johmue/old-python-home nil)
+	)))))
 
 (defvar johmue/pytest-arg-hist nil)
 
@@ -170,6 +203,8 @@
   ;(message "command is '%s'" (concat "pytest -v " args))
   (compile (concat "pytest -v " args))
   )
+
+
 
 
 (defun johmue/update-elpa-keyring ()
