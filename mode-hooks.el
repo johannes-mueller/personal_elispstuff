@@ -130,6 +130,16 @@
 	   ; (setq flychek-checker 'cargo)
 	    ))
 
+(add-hook 'rustic-mode-hook
+	  (lambda ()
+	    (cargo-minor-mode)
+	    (rainbow-delimiters-mode)
+	    (setq indent-tabs-mode nil)
+	    (fci-mode)
+	    (setq fci-rule-column 100)
+	   ; (setq flychek-checker 'cargo)
+	    ))
+
 (with-eval-after-load 'rust-mode
   (add-hook 'flycheck-mode-hook #'flycheck-rust-setup))
 
