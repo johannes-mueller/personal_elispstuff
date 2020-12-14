@@ -167,7 +167,7 @@
       ((possible-env-dir
 	(concat
 	 (file-name-as-directory
-	  (projectile-project-p)) ".venv"))
+	  (or (projectile-project-p) default-directory)) ".venv"))
        (current-path (if johmue/old-path
 			 johmue/old-path
 		       (getenv "PATH")))
