@@ -202,10 +202,6 @@
                                   :compile "pytest -v"
                                   :test "pytest -v")
 
-(require 'auto-virtualenv)
-(add-hook 'python-mode-hook 'auto-virtualenv-set-virtualenv)
-(add-hook 'projectile-after-switch-project-hook 'auto-virtualenv-set-virtualenv)
-
 (add-hook 'elixir-mode-hook
 	  (lambda ()
 	    (add-to-list 'elixir-mode-hook
