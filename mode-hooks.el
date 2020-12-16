@@ -112,6 +112,12 @@
 (add-hook 'conda-postactivate-hook 'johmue/switch-to-ipython-if-possible)
 (add-hook 'conda-postdeactivate-hook 'johmue/switch-to-python)
 
+;; (require 'lsp-jedi)
+;; (require 'lsp-pyright)
+;; (with-eval-after-load "lsp-mode"
+;;   (add-to-list 'lsp-disabled-clients 'pyls)
+;;   (add-to-list 'lsp-enabled-clients 'pyright))
+
 (add-hook 'python-mode-hook #'lsp)
 (setq lsp-pyls-configuration-sources ["flake8"])
 
