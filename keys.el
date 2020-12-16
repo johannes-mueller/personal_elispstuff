@@ -54,7 +54,7 @@
 ;(define-key global-map '(meta control kp-4) 'normalframe)
 
 (define-key global-map (kbd "C-c c") 'python-pytest-dispatch)
-(define-key python-mode-map [S-f12] 'python-pytest-repeat)
+;(define-key python-mode-map [S-f12] 'python-pytest-repeat)
 
 (define-key global-map [(meta g)] 'magit-status)
 
