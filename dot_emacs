@@ -197,7 +197,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "LightYellow" :foreground "black" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 80 :width normal :family "Roboto Mono"))))
+ '(default ((t (:inherit nil :stipple nil :background "LightYellow" :foreground "black" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 110 :width wide :family "Roboto Mono"))))
  '(auto-dim-other-buffers-face ((t (:background "lemon chiffon"))))
  '(cperl-array-face ((((class color) (background light)) (:foreground "magenta4"))))
  '(cperl-hash-face ((((class color) (background light)) (:foreground "steelblue" :bold t))))
